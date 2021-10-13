@@ -1,0 +1,51 @@
+{
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.errorSign": "✘",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "tslint.autoFixOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "scss",
+    "html",
+    "markdown",
+    "Markdown"
+  ],
+  "html.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ],
+  "coc.preferences.formatOnType": true,
+  "suggest.completionItemKindLabels": {
+    "method": "  ",
+    "function": "  ",
+    "variable": "[]",
+    "field": "  ",
+    "typeParameter": "<>",
+    "constant": "  ",
+    "class": "  ",
+    "interface": " ﰮ ",
+    "struct": "  ",
+    "event": "  ",
+    "operator": "  ",
+    "module": " {} ",
+    "property": "  ",
+    "enum": " 練",
+    "reference": "  ",
+    "keyword": "  ",
+    "file": "  ",
+    "folder": "  ",
+    "color": "  ",
+    "unit": " 塞 ",
+    "snippet": " ﬌ ",
+    "text": "  ",
+    "constructor": "  ",
+    "value": "  ",
+    "enumMember": "  "
+  }
+}
