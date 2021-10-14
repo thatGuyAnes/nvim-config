@@ -2,7 +2,7 @@
 let g:gruvbox_bold = 1
 
 " Set to 1 to include syntax highligh definitions for several filetypes.
-let g:gruvbox_filetype_hi_groups = 0
+let g:gruvbox_filetype_hi_groups = 1
 
 " Set to 0 if you do not want to enable italics
 let g:gruvbox_italics = 1

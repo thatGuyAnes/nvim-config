@@ -21,7 +21,7 @@ let g:solarized_italics = 1
 " set to 1 if you want to use the original Solarized's cursor style (default:
 " 0). By default, the cursor is orange/red in light themes, and blue in dark
 " themes (but please note that your terminal may override the cursor's color).
-let g:solarized_old_cursor_style = 0
+let g:solarized_old_cursor_style = 1
 
 " set to 1 to force using your 16 ANSI terminal colors.
 let g:solarized_use16 = 0
