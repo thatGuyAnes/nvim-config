@@ -1,6 +1,7 @@
 {
   "diagnostic.checkCurrentLine": true,
   "diagnostic.errorSign": "✘",
+  "eslint.run": "onType",
   "diagnostic.warningSign": "",
   "diagnostic.infoSign": "",
   "tslint.autoFixOnSave": true,
