@@ -12,6 +12,7 @@ nnoremap <leader>l :wincmd l<CR>
 
 " Better escape OR fucking use ctrl-[ !!!
 inoremap jj <Esc>
+inoremap JJ <Esc>
 
 "//////////////////////////////////////////////////////////////////////////////
 " If you use Vim in a terminal, pressing alt will send an escape character
@@ -53,7 +54,6 @@ nnoremap <M-h> :vertical resize +5<CR>
 " nnoremap <Leader>rk :resize -5<CR>
 nnoremap <M-j> :resize -5<CR>
 nnoremap <M-k> :resize +5<CR>
-
 
 " Surround
 " `ysiw`             ----> surround word
