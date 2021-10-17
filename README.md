@@ -2,6 +2,9 @@
 
 ### Powered by [coc](https://github.com/neoclide/coc.nvim) and geared toward Front-End development
 
+Stable configuration @master branch.
+Testing configuration @testing branch.
+
 ![Alt text](demo.png)
 ![Alt text](demo_2.png)
 
