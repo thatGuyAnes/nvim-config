@@ -15,8 +15,7 @@ set incsearch                           " Shows the matched charcters when searc
 set hlsearch                            " Highlights all matched search.
 set ignorecase                          " Ignores case sensitivity.
 set smartcase                           " Enables case sensitivity when using uppercases.
-set scrolloff=3                         " Always showing 3 lines when scrolling.
-set colorcolumn=80                      " 80 characters column.
+set colorcolumn=81                      " 80 characters column.
 set splitright                          " Vertical splits to the right.
 set splitbelow                          " Horizontal splits to the bottom.
 set nu                                  " Enables line numbers.
@@ -33,6 +32,7 @@ set timeoutlen=500                      " Time to wait for a mapped sequence to 
 set conceallevel=0                      " Shows backticks in md files.
 set winblend=10                         " Floating windows transparency.
 set sidescroll=5                        " Number of columns to scroll horizontaly offscreen.
+set scrolloff=3                         " Always showing 3 lines when scrolling.
 au BufEnter * set fo-=c fo-=r fo-=o     " set formatoptions-=rco, simply stops having comment on new line.
 au! BufWritePost $MYVIMRC source %      " Saving in init.vim sources it. (:source $MYVIMRC)
 " set listchars+=precedes:<,extends:>
@@ -47,5 +47,6 @@ let g:html_indent_tags = 'li\|p'
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Indent 4 spaces in HTML
-autocmd Filetype html setlocal ts=4 sw=4 expandtab
-filetype plugin indent on
+autocmd Filetype html setlocal ts=4 sw=4 expandtab"# {{{# {{{# {{{# {{{
+filetype plugin indent on"# }}}# }}}# }}}# }}}
+

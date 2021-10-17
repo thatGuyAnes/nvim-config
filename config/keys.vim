@@ -14,6 +14,14 @@ nnoremap <leader>l :wincmd l<CR>
 inoremap jj <Esc>
 inoremap JJ <Esc>
 
+" Horizontal Scrolling.
+map <C-l> 10zl
+map <C-h> 10zh
+
+" Move current line up/down.
+nnoremap <silent> mk :move -2<CR>
+nnoremap <silent> mj :move +1<CR>
+
 "//////////////////////////////////////////////////////////////////////////////
 " If you use Vim in a terminal, pressing alt will send an escape character
 " followed by the normal_mode_key that you
@@ -65,7 +73,3 @@ nnoremap <M-k> :resize +5<CR>
 
 " File explorer.
 nnoremap <silent> <C-p> :Files<CR>
-
-" " Toggle Tree
-" map <silent> <C-n> :NERDTreeToggle<CR>
-" map <leader>nf :NERDTreeFind<CR>

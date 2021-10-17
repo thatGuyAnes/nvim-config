@@ -3,7 +3,7 @@ require'lualine'.setup {
   options = {
     icons_enabled = true,
     padding = 1,
-    theme = 'dracula',
+    theme = 'gruvbox',
     section_separators = {'', ''},
     component_separators = {'', ''},
     disabled_filetypes = {}
