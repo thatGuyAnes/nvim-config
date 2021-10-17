@@ -113,10 +113,10 @@ The two that I use the most are [gruvbox8](https://github.com/lifepillar/vim-gru
 
 ##### Future plans
 
-* Add and installation script.
-* Full list of hotkeys.
-* List of plugins and alternatives.
-* Custumization (How to add plugins, color configuration etc).
-* Migrate to lua.
-* lsp instead of coc(I don't see a solid reason to make the switch right now.)
+* [  ] Add an installation script.
+* [  ] Full list of hotkeys.
+* [  ] List of plugins and alternatives.
+* [  ] Custumization (How to add plugins, color configuration etc).
+* [  ] Migrate to lua.
+* [  ] lsp instead of coc(I don't see a solid reason to make the switch right now.)
 
