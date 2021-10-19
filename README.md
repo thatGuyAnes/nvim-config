@@ -2,6 +2,15 @@
 
 ### Powered by [coc](https://github.com/neoclide/coc.nvim) and geared toward Front-End development
 
+<details>
+  <summary>Changelog:</summary>
+  <pre>
+    <h5>Oct 19</h5>
+    * Added some keys for better navigation.
+    * Fast horizontal scrolling for long lines.
+  </pre>
+</details>
+
 ![Alt text](demo.png)
 ![Alt text](demo_2.png)
 

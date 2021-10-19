@@ -24,7 +24,7 @@ set nohlsearch                          " No highlights after searching is done.
 set clipboard+=unnamedplus              " Copy paste from clipboard from/to vim.
 set noshowmode                          " Remove mode information (unnecessary because it's displayed in the statusline)
 set laststatus=2                        " Statusline even there's only one window ALWAYS!!!
-set cmdheight=2                         " Command line height (default 1).
+set cmdheight=1                         " Command line height (default 1).
 set signcolumn=yes                      " Enables sign colomn.
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set updatetime=300                      " faster completion.
@@ -33,6 +33,7 @@ set conceallevel=0                      " Shows backticks in md files.
 set winblend=10                         " Floating windows transparency.
 set sidescroll=5                        " Number of columns to scroll horizontaly offscreen.
 set scrolloff=3                         " Always showing 3 lines when scrolling.
+" set scroll=4                            " Number of lines to scroll by.
 au BufEnter * set fo-=c fo-=r fo-=o     " set formatoptions-=rco, simply stops having comment on new line.
 au! BufWritePost $MYVIMRC source %      " Saving in init.vim sources it. (:source $MYVIMRC)
 " set listchars+=precedes:<,extends:>

@@ -19,7 +19,7 @@ require'lualine'.setup {
       }
       },
     lualine_x = {'filetype'},
-    lualine_y = {'progress'},
+    lualine_y = {},
     lualine_z = {'location'}
   },
   inactive_sections = {

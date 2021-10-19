@@ -18,9 +18,22 @@ inoremap JJ <Esc>
 map <C-l> 10zl
 map <C-h> 10zh
 
+nnoremap <silent> <C-j> 5j
+nnoremap <silent> <C-k> 5k
+
 " Move current line up/down.
 nnoremap <silent> mk :move -2<CR>
 nnoremap <silent> mj :move +1<CR>
+
+" Smooth scrolling: vim-smoothie setup;
+let g:smoothie_no_default_mappings = v:true
+silent! map <unique> <C-D>      <Plug>(SmoothieDownwards)
+silent! map <unique> <C-U>      <Plug>(SmoothieUpwards)
+silent! map <unique> <C-f>      <Plug>(SmoothieForwards)
+silent! map <unique> <S-Down>   <Plug>(SmoothieForwards)
+silent! map <unique> <PageDown> <Plug>(SmoothieForwards)
+silent! map <unique> <PageUp>   <Plug>(SmoothieBackwards)
+
 
 "//////////////////////////////////////////////////////////////////////////////
 " If you use Vim in a terminal, pressing alt will send an escape character

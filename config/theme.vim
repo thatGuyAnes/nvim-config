@@ -18,18 +18,20 @@ endif
 set termguicolors                 " Enables true colors.
 syntax enable                     " Enables syntax highlighting.
 set background=dark               " Theme bg. {light, dark}.
-colorscheme gruvbox8_hard            " Color scheme.
+colorscheme gruvbox8_hard               " Color scheme.
 
+" autocmd ColorScheme dracula hi CursorLine cterm=underline term=underline
 
 "##############################################################################
 "### Highlights ###
 "##############################################################################
 
-hi Normal       guibg=none      ctermbg=none          " Removes bg.
+" hi Normal       guibg=none      ctermbg=none          " Removes bg.
 " hi CursorLineNr guibg=none      gui=bold              " Cursorline numbers bg.
-" hi LineNr       guibg=none      ctermbg=none          " Line numbers bg.
+hi CursorLineNr guifg=#5eacd3      ctermfg=none          " Cursorline numbers fg.
 " hi CursorLine   guibg=none      ctermbg=none          " Cursor line bg.
-" hi LineNr       guifg=Grey      ctermfg=Grey          " Line numbers fg.
+" hi LineNr       guibg=none      ctermbg=none          " Line numbers bg.
+hi LineNr       guifg=#5eacd3      ctermfg=Grey          " Line numbers fg.
 " hi Signcolumn   guibg=none      ctermbg=none          " Signcolumn bg.
 " hi Visual       guifg=none      ctermfg=black         " Visual selection fg.
 " hi Visual       guibg=SeaGreen  ctermbg=Grey          " Visual selection bg.
