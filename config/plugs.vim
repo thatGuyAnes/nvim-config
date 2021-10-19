@@ -34,5 +34,6 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'shaunsingh/moonlight.nvim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
