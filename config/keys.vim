@@ -40,12 +40,14 @@ inoremap jj <Esc>
 inoremap JJ <Esc>
 
 " Move current line up/down.
-nnoremap <silent> mk :move -2<CR>
-nnoremap <silent> mj :move +1<CR>
-" with the power of gv we can move visual selection!! get last selection.
-vnoremap <silent> mk :move -2<CR>gv
-vnoremap <silent> mj :move +1<CR>gv
-
+nnoremap <silent> mk :m-2<CR>==
+nnoremap <silent> mj :m+<CR>==
+vnoremap <silent> mk :m'<-2<CR>gv=gv
+vnoremap <silent> mj :m'>+<CR>gv=gv
+inoremap <silent> mk <Esc>:m-2<CR>==gi
+inoremap <silent> mj <Esc>:m+<CR>==gi
+nnoremap <silent> m} :m'}-<CR>
+nnoremap <silent> m{ :m'{+<CR>
 
 " If you use Vim in a terminal, pressing alt will send an escape character
 " followed by the normal_mode_key that you pressed, removing the need to press
