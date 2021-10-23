@@ -4,26 +4,22 @@ let g:mapleader = "\<Space>"
 " map <Esc> to exit terminal-mode:
 tnoremap <Esc> <C-\><C-n>
 
+"###############################################################################
+"### NAVIGATION ###
+"###############################################################################
+
 " Splits navigation.
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-" Better escape OR fucking use ctrl-[ !!!
-inoremap jj <Esc>
-inoremap JJ <Esc>
-
 " Horizontal Scrolling.
-map <C-l> 10zl
-map <C-h> 10zh
+noremap <C-l> 10l
+noremap <C-h> 10h
 
 nnoremap <silent> <C-j> 5j
 nnoremap <silent> <C-k> 5k
-
-" Move current line up/down.
-nnoremap <silent> mk :move -2<CR>
-nnoremap <silent> mj :move +1<CR>
 
 " Smooth scrolling: vim-smoothie setup;
 let g:smoothie_no_default_mappings = v:true
@@ -35,34 +31,59 @@ silent! map <unique> <PageDown> <Plug>(SmoothieForwards)
 silent! map <unique> <PageUp>   <Plug>(SmoothieBackwards)
 
 
-"//////////////////////////////////////////////////////////////////////////////
+"###############################################################################
+"### EDITING ###
+"###############################################################################
+
+" Better escape OR f**** use `ctrl-[` !!!
+inoremap jj <Esc>
+inoremap JJ <Esc>
+
+" Move current line up/down.
+nnoremap <silent> mk :move -2<CR>
+nnoremap <silent> mj :move +1<CR>
+" with the power of gv we can move visual selection!! get last selection.
+vnoremap <silent> mk :move -2<CR>gv
+vnoremap <silent> mj :move +1<CR>gv
+
+
 " If you use Vim in a terminal, pressing alt will send an escape character
-" followed by the normal_mode_key that you
-" pressed, removing the need to press escape yourself.
-"//////////////////////////////////////////////////////////////////////////////
-" For Tmux ;
-" New lines without going to insert mode
+" followed by the normal_mode_key that you pressed, removing the need to press
+" escape yourself.
+" For Tmux ; New lines without going to insert mode
 nnoremap <A-o> o<Esc>
 nnoremap <A-O> O<Esc>
 
-" Better editing
 nnoremap vw viw
 nnoremap cw ciw
 nnoremap dw diw
 nnoremap V v$
 nnoremap vv V
 
-" Better tabbing indentation
+
+" Tabbing indentation.
 vnoremap < <gv
 vnoremap > >gv
 
-" Full width & Full height splits.
-nnoremap <leader>fh :wincmd _<CR>
-nnoremap <leader>fw :wincmd \|<CR>
+" Surround
+" `ysiw`             ----> surround word
+" `cs`<OLD><NEW>     ----> change surround
+" `cst`<NEW>         ----> change surround
+" `yss`                ----> surround entire line
+" `ds`                 ----> delete surround
+" VISUAL + S + <NEW> ----> surround selection
 
 " Commentary
 nnoremap <leader>/ :Commentary<CR>
 vnoremap <leader>/ :Commentary<CR>
+
+"###############################################################################
+"### LAYOUT ###
+"###############################################################################
+
+" Full width & Full height splits.
+nnoremap <leader>fh :wincmd _<CR>
+nnoremap <leader>fw :wincmd \|<CR>
 
 " Vertical resize
 " nnoremap <Leader>rl :vertical resize +5<CR>
@@ -75,14 +96,6 @@ nnoremap <M-h> :vertical resize +5<CR>
 " nnoremap <Leader>rk :resize -5<CR>
 nnoremap <M-j> :resize -5<CR>
 nnoremap <M-k> :resize +5<CR>
-
-" Surround
-" `ysiw`             ----> surround word
-" `cs`<OLD><NEW>     ----> change surround
-" `cst`<NEW>         ----> change surround
-" `yss`                ----> surround entire line
-" `ds`                 ----> delete surround
-" VISUAL + S + <NEW> ----> surround selection
 
 " File explorer.
 nnoremap <silent> <C-p> :Files<CR>

@@ -1,9 +1,9 @@
 set nowrap                              " Disables line wrapping.
 set cursorline                          " Highlights the current line.
-set tabstop=2                           " Tabs are 2 spaces.
+set tabstop=4                           " Tabs are 2 spaces.
 set showtabline=2                       " Show tabs (default 0:never, 1: more than one window, 2:always)
-set softtabstop=2                       "
-set shiftwidth=2                        " Number of space characters used for indentation.
+set softtabstop=4                       " Nuber of spaces that <Tab> uses when editing.
+set shiftwidth=4                       " Number of space characters used for indentation.
 set expandtab                           " Changes tabs to spaces.
 set smartindent                         " Shrewder and better auto indentation.
 set autoindent                          " Atuto indent.
@@ -30,7 +30,7 @@ set shortmess+=c                        " Don't pass messages to |ins-completion
 set updatetime=300                      " faster completion.
 set timeoutlen=500                      " Time to wait for a mapped sequence to complete.
 set conceallevel=0                      " Shows backticks in md files.
-set winblend=10                         " Floating windows transparency.
+set winblend=20                         " Floating windows transparency.
 set sidescroll=5                        " Number of columns to scroll horizontaly offscreen.
 set scrolloff=3                         " Always showing 3 lines when scrolling.
 " set scroll=4                            " Number of lines to scroll by.
@@ -39,15 +39,15 @@ au! BufWritePost $MYVIMRC source %      " Saving in init.vim sources it. (:sourc
 " set listchars+=precedes:<,extends:>
 
 " Blinking cursor in insert mode + horizontal cursor in visual and replace mode.
-set guicursor=i-c:ver100-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor20
+" set guicursor=i-c:ver100-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor20
 
 " Treat <li> and <p> tags like the block tags they are.
 let g:html_indent_tags = 'li\|p'
-
-" True colors
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Indent 4 spaces in HTML
 autocmd Filetype html setlocal ts=4 sw=4 expandtab"# {{{# {{{# {{{# {{{
 filetype plugin indent on"# }}}# }}}# }}}# }}}
 
+" Turn on spell check for markdown files.
+autocmd! BufRead,BufNewFile *.md setlocal spell spelllan=en_us 
+set complete+=kspell

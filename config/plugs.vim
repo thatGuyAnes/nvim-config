@@ -24,10 +24,7 @@ Plug 'mboughaba/i3config.vim'                                        " Syntax hi
 Plug 'hoob3rt/lualine.nvim'                                          " Status Line
 Plug 'norcalli/nvim-colorizer.lua'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""COLOR SCHEMES"""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" -----------------------------------------------------------------COLOR SCHEMES
 Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'gruvbox-community/gruvbox'
@@ -35,5 +32,8 @@ Plug 'shaunsingh/moonlight.nvim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'arcticicestudio/nord-vim'
+Plug 'joshdick/onedark.vim'
+Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'drewtempelmeyer/palenight.vim'
 
 call plug#end()
