@@ -1,6 +1,6 @@
 "##############################################################################
 "### Importing themes configurations ###
-"## { dracula, gruvbox, ayu, moonlight, solarized8, material} ##
+"## { dracula, gruvbox, ayu, moonlight, solarized8, material, lucario} ##
 "##############################################################################
 source $HOME/.config/nvim/config/themes/gruvbox.vim
 source $HOME/.config/nvim/config/themes/dracula.vim
@@ -34,12 +34,12 @@ colorscheme gruvbox8              " Color scheme.
 "### Highlights ###
 "##############################################################################
 
-hi Normal       guibg=none      ctermbg=none          " Removes bg.
+" hi Normal       guibg=none      ctermbg=none          " Removes bg.
 " hi CursorLineNr guibg=none      gui=bold              " Cursorline numbers bg.
-hi CursorLineNr guifg=#5eacd3      ctermfg=none          " Cursorline numbers fg.
+" hi CursorLineNr guifg=#5eacd3      ctermfg=none          " Cursorline numbers fg.
 " hi CursorLine   guibg=none      ctermbg=none          " Cursor line bg.
 " hi LineNr       guibg=none      ctermbg=none          " Line numbers bg.
-hi LineNr       guifg=#5eacd3      ctermfg=Grey          " Line numbers fg.
+" hi LineNr       guifg=#5eacd3      ctermfg=Grey          " Line numbers fg.
 " hi Signcolumn   guibg=none      ctermbg=none          " Signcolumn bg.
 " hi Visual       guifg=none      ctermfg=black         " Visual selection fg.
 " hi Visual       guibg=SeaGreen  ctermbg=Grey          " Visual selection bg.
