@@ -1,52 +1,74 @@
 {
-  "diagnostic.checkCurrentLine": true,
-  "diagnostic.errorSign": "✘",
-  "eslint.run": "onType",
-  "diagnostic.warningSign": "",
-  "diagnostic.infoSign": "",
-  "tslint.autoFixOnSave": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "css",
-    "scss",
-    "html",
-    "markdown",
-    "Markdown"
-  ],
-  "html.autoClosingTags": true,
-  "javascript.autoClosingTags": true,
-  "eslint.probe": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "html"
-  ],
-  "coc.preferences.formatOnType": true,
-  "suggest.completionItemKindLabels": {
-    "method": "  ",
-    "function": "  ",
-    "variable": "[]",
-    "field": "  ",
-    "typeParameter": "<>",
-    "constant": "  ",
-    "class": "  ",
-    "interface": " ﰮ ",
-    "struct": "  ",
-    "event": "  ",
-    "operator": "  ",
-    "module": " {} ",
-    "property": "  ",
-    "enum": " 練",
-    "reference": "  ",
-    "keyword": "  ",
-    "file": "  ",
-    "folder": "  ",
-    "color": "  ",
-    "unit": " 塞 ",
-    "snippet": " ﬌ ",
-    "text": "  ",
-    "constructor": "  ",
-    "value": "  ",
-    "enumMember": "  "
-  }
+    "diagnostic.checkCurrentLine": true,
+    "diagnostic.errorSign": "✘",
+    "diagnostic.warningSign": "",
+    "diagnostic.infoSign": "",
+
+    "eslint.run": "onType",
+    "eslint.packageManager": "npm",
+    "eslint.probe": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html"
+    ],
+
+    "html.autoClosingTags": true,
+    "javascript.autoClosingTags": true,
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.suggest.paths": true,
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "tslint.jsEnable": true,
+    "tslint.autoFixOnSave": true,
+
+    "coc.preferences.formatOnType": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "scss",
+        "html",
+        "markdown",
+        "Markdown",
+        "javascript",
+        "json"
+    ],
+
+    "languageserver": {
+        "bash": {
+            "command": "bash-language-server",
+            "args": [
+                "start"
+            ],
+            "filetypes": [
+                "sh"
+            ]
+        }
+    },
+    "suggest.completionItemKindLabels": {
+        "method": "  ",
+        "function": "  ",
+        "variable": "[]",
+        "field": "  ",
+        "typeParameter": "<>",
+        "constant": "  ",
+        "class": "  ",
+        "interface": " ﰮ ",
+        "struct": "  ",
+        "event": "  ",
+        "operator": "  ",
+        "module": " {} ",
+        "property": "  ",
+        "enum": " 練",
+        "reference": "  ",
+        "keyword": "  ",
+        "file": "  ",
+        "folder": "  ",
+        "color": "  ",
+        "unit": " 塞 ",
+        "snippet": " ﬌ ",
+        "text": "  ",
+        "constructor": "  ",
+        "value": "  ",
+        "enumMember": "  "
+    }
 }

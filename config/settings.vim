@@ -30,7 +30,7 @@ set shortmess+=c                        " Don't pass messages to |ins-completion
 set updatetime=300                      " faster completion.
 set timeoutlen=500                      " Time to wait for a mapped sequence to complete.
 set conceallevel=0                      " Shows backticks in md files.
-set winblend=20                         " Floating windows transparency.
+set winblend=30                         " Floating windows transparency.
 set sidescroll=5                        " Number of columns to scroll horizontaly offscreen.
 set scrolloff=3                         " Always showing 3 lines when scrolling.
 " set scroll=4                            " Number of lines to scroll by.
@@ -49,5 +49,13 @@ autocmd Filetype html setlocal ts=4 sw=4 expandtab"# {{{# {{{# {{{# {{{
 filetype plugin indent on"# }}}# }}}# }}}# }}}
 
 " Turn on spell check for markdown files.
-autocmd! BufRead,BufNewFile *.md setlocal spell spelllan=en_us 
+autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
+" spelllan=en_us
+
+
+" Emoji in markdown using vim-emoji plugin:
+augroup emoji_complete
+    autocmd!
+    autocmd Filetype markdown setlocal completefunc=emoji#complete
+augroup END
