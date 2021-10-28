@@ -39,5 +39,6 @@ Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'tomasr/molokai'
 Plug 'sickill/vim-monokai'
+Plug 'WeeSnail/sonokai'
 
 call plug#end()
