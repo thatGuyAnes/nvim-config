@@ -40,5 +40,6 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'tomasr/molokai'
 Plug 'sickill/vim-monokai'
 Plug 'WeeSnail/sonokai'
+Plug 'https://gitlab.com/__tpb/monokai-pro.nvim'
 
 call plug#end()

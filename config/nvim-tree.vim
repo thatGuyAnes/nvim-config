@@ -9,7 +9,7 @@ let g:nvim_tree_indent_markers = 1
 "0 by default, this option hides files and folders starting with a dot `.`
 let g:nvim_tree_hide_dotfiles = 0
 "0 by default, will enable file highlight for git attributes (can be used without the icons).
-let g:nvim_tree_git_hl = 0
+let g:nvim_tree_git_hl = 1
 "0 by default, will enable folder and file icon highlight for opened files/directories.
 let g:nvim_tree_highlight_opened_files = 1
 "This is the default. See :help filename-modifiers for more options
@@ -57,7 +57,7 @@ let g:nvim_tree_show_icons = {
     \ 'git': 1,
     \ 'folders': 1,
     \ 'files': 1,
-    \ 'folder_arrows': 0,
+    \ 'folder_arrows': 1,
     \ }
 
 " default will show icon by default if no icon is provided
@@ -92,7 +92,8 @@ nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
 " this variable must be enabled for colors to be applied properly
-set termguicolors
+" set termguicolors
+
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
 
@@ -109,7 +110,7 @@ require'nvim-tree'.setup {
   -- will not open on setup if the filetype is in this list
   ignore_ft_on_setup  = {},
   -- closes neovim automatically when the tree is the last **WINDOW** in the view
-  auto_close          = false,
+  auto_close          = true,
   -- opens the tree when changing/opening a new tab if the tree wasn't previously opened
   open_on_tab         = true,
   -- hijacks new directory buffers when they are opened.
@@ -120,7 +121,7 @@ require'nvim-tree'.setup {
     auto_open = true,
   },
   -- hijack the cursor in the tree to put it at the start of the filename
-  hijack_cursor       = false,
+  hijack_cursor       = true,
   -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually)
   update_cwd          = false,
   -- show lsp diagnostics in the signcolumn
@@ -136,7 +137,7 @@ require'nvim-tree'.setup {
   -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
   update_focused_file = {
     -- enables the feature
-    enable      = false,
+    enable      = true,
     -- update the root directory of the tree to the one of the folder containing the file if the file is not under the current root directory
     -- only relevant when `update_focused_file.enable` is true
     update_cwd  = false,

@@ -11,6 +11,8 @@ source $HOME/.config/nvim/config/themes/gruvbox8.vim
 source $HOME/.config/nvim/config/themes/onedark.vim
 source $HOME/.config/nvim/config/themes/material.vim
 source $HOME/.config/nvim/config/themes/palenight.vim
+source $HOME/.config/nvim/config/themes/sonokai.vim
+source $HOME/.config/nvim/config/themes/monokaiPro.vim
 
 " Get the right colors when running Vim inside tmux: see `:h xterm-true-color`
 if exists('+termguicolors')
@@ -28,7 +30,7 @@ endif
 
 syntax enable                     " Enables syntax highlighting.
 set background=dark               " Theme bg. {light, dark}.
-colorscheme gruvbox8              " Color scheme.
+colorscheme sonokai               " Color scheme.
 
 "##############################################################################
 "### Highlights ###
@@ -36,10 +38,10 @@ colorscheme gruvbox8              " Color scheme.
 
 " hi Normal       guibg=none      ctermbg=none          " Removes bg.
 " hi CursorLineNr guibg=none      gui=bold              " Cursorline numbers bg.
-" hi CursorLineNr guifg=#5eacd3      ctermfg=none          " Cursorline numbers fg.
+" hi CursorLineNr guifg=#5eacd3   ctermfg=none          " Cursorline numbers fg.
 " hi CursorLine   guibg=none      ctermbg=none          " Cursor line bg.
 " hi LineNr       guibg=none      ctermbg=none          " Line numbers bg.
-" hi LineNr       guifg=#5eacd3      ctermfg=Grey          " Line numbers fg.
+" hi LineNr       guifg=#5eacd3   ctermfg=Grey          " Line numbers fg.
 " hi Signcolumn   guibg=none      ctermbg=none          " Signcolumn bg.
 " hi Visual       guifg=none      ctermfg=black         " Visual selection fg.
 " hi Visual       guibg=SeaGreen  ctermbg=Grey          " Visual selection bg.
