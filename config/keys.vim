@@ -21,7 +21,7 @@ noremap <C-h> 10h
 nnoremap <silent> <C-j> 5j
 nnoremap <silent> <C-k> 5k
 
-" Smooth scrolling: vim-smoothie setup;
+" Smooth scrolling: vim-smoothie setup.
 let g:smoothie_no_default_mappings = v:true
 silent! map <unique> <C-D>      <Plug>(SmoothieDownwards)
 silent! map <unique> <C-U>      <Plug>(SmoothieUpwards)
@@ -40,14 +40,14 @@ inoremap jj <Esc>
 inoremap JJ <Esc>
 
 " Move current line up/down.
-nnoremap <silent> mk :m-2<CR>==
-nnoremap <silent> mj :m+<CR>==
-vnoremap <silent> mk :m'<-2<CR>gv=gv
-vnoremap <silent> mj :m'>+<CR>gv=gv
-inoremap <silent> mk <Esc>:m-2<CR>==gi
-inoremap <silent> mj <Esc>:m+<CR>==gi
-nnoremap <silent> m} :m'}-<CR>
-nnoremap <silent> m{ :m'{+<CR>
+nnoremap <silent> <A-k> :m-2<CR>==
+nnoremap <silent> <A-j> :m+<CR>==
+vnoremap <silent> <A-k> :m'<-2<CR>gv=gv
+vnoremap <silent> <A-j> :m'>+<CR>gv=gv
+inoremap <silent> <A-k> <Esc>:m-2<CR>==gi
+inoremap <silent> <A-j> <Esc>:m+<CR>==gi
+nnoremap <silent> <A-}> :m'}-<CR>
+nnoremap <silent> <A-{> :m'{+<CR>
 
 " If you use Vim in a terminal, pressing alt will send an escape character
 " followed by the normal_mode_key that you pressed, removing the need to press
@@ -93,11 +93,26 @@ nnoremap <leader>fw :wincmd \|<CR>
 nnoremap <M-l> :vertical resize -5<CR>
 nnoremap <M-h> :vertical resize +5<CR>
 
+" I don't necessary need this.
 " Horizontal resize
-" nnoremap <Leader>rj :resize +5<CR>
-" nnoremap <Leader>rk :resize -5<CR>
-nnoremap <M-j> :resize -5<CR>
-nnoremap <M-k> :resize +5<CR>
+" nnoremap <M-j> :resize -5<CR>
+" nnoremap <M-k> :resize +5<CR>
 
 " File explorer.
 nnoremap <silent> <C-p> :Files<CR>
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true } }
+" let g:fzf_layout = { 'down': '50%' }
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }

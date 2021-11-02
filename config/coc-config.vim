@@ -1,7 +1,17 @@
 " Coc global extensions
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-tslint-plugin',
-            \'coc-json', 'coc-html', 'coc-css', 'coc-diagnostic', 'coc-emmet',
-            \'coc-snippets', 'coc-eslint' ]
+let g:coc_global_extensions = [ 
+            \ 'coc-css',
+            \ 'coc-diagnostic',
+            \ 'coc-emmet',
+            \ 'coc-eslint',
+            \ 'coc-html',
+            \ 'coc-json',
+            \ 'coc-markdownlint',
+            \ 'coc-sh' ,
+            \ 'coc-snippets',
+            \ 'coc-tslint-plugin',
+            \ 'coc-tsserver',
+            \ ]
 
 autocmd FileType scss setl iskeyword+=@-@
 

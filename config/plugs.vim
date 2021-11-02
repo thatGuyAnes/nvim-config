@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}                      " Completion
 Plug 'junegunn/fzf', { 'do' : { -> fzf#install() } }                 " Fuzzy Search
 Plug 'junegunn/fzf.vim'                                              " ////////////
+Plug 'junegunn/vim-emoji'                                            " Emoji in vim
 Plug 'psliwka/vim-smoothie'                                          " Smooth Scrolling <C-d>&<C-U>
 Plug 'jiangmiao/auto-pairs'                                          " Insert Closing pairs
 Plug 'tpope/vim-fugitive'                                            " Git wrapper
@@ -23,6 +24,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'mboughaba/i3config.vim'                                        " Syntax highlighting for i3 conf file
 Plug 'hoob3rt/lualine.nvim'                                          " Status Line
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " -----------------------------------------------------------------COLOR SCHEMES
 Plug 'ayu-theme/ayu-vim'
@@ -35,5 +37,9 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'tomasr/molokai'
+Plug 'sickill/vim-monokai'
+Plug 'WeeSnail/sonokai'
+Plug 'https://gitlab.com/__tpb/monokai-pro.nvim'
 
 call plug#end()

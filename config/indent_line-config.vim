@@ -2,8 +2,8 @@ lua << EOF
 -- vim.opt.termguicolors = true
 --vim.cmd [[highlight IndentBlanklineIndent1 guifg=#FFFFFF gui=nocombine]]
 -- line indent highlights.
-vim.cmd [[highlight IndentBlanklineIndent1 guifg=#aaa gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent2 guifg=#c5C07B gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#888888 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guifg=#555555 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent3 guifg=#1F83A9 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent4 guifg=#86d642 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent5 guifg=#A13F8F gui=nocombine]]
