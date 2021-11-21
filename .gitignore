@@ -2,3 +2,5 @@ autoload/*
 Old/
 with-lsp/
 notes.md
+.git
+config/lsp.vim

@@ -21,7 +21,7 @@ set noshowmode                          " Remove mode information (unnecessary b
 set nowrap                              " Disables line wrapping.
 set nu                                  " Enables line numbers.
 set relativenumber                      " Line numbers relative to the current line.
-set scrolloff=10                         " Always showing 3 lines when scrolling.
+set scrolloff=10                        " Always show x number of lines when scrolling.
 " set scroll=5                            " Number of lines to scroll by.
 " set sidescroll=999                        " Number of columns to scroll horizontaly offscreen.
 set shiftwidth=2                       " Number of space characters used for indentation.
@@ -32,26 +32,24 @@ set signcolumn=yes                      " Enables sign colomn.
 set smartcase                           " Enables case sensitivity when using uppercases.
 set smartindent                         " Shrewder and better auto indentation.
 set smarttab                            " Better IQ for tabs.
-set softtabstop=2                       " Nuber of spaces that <Tab> uses when editing.
+set softtabstop=2                       " Number of spaces that <Tab> uses when editing.
 set splitbelow                          " Horizontal splits to the bottom.
 set splitright                          " Vertical splits to the right.
 set tabstop=2                           " Tabs are 2 spaces.
 set timeoutlen=500                      " Time to wait for a mapped sequence to complete.
 set updatetime=300                      " faster completion.
+set guicursor=i:block                   " Set cursor to block.
 " set winblend=30                         " Floating windows transparency.
 " Blinking cursor in insert mode + horizontal cursor in visual and replace mode.
-" set guicursor=i-c:ver100-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor20
-
-
-noremap <silent> <leader>date "=strftime("%F")<CR>p9h
-noremap <silent> <leader>time "=strftime("%X")<CR>p7h
+" set guicursor=i-c:ver300-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor50
+set guicursor=i-c:block-iCursor-blinkwait300-blinkon200-blinkoff150
 
 " Treat <li> and <p> tags like the block tags they are.
 let g:html_indent_tags = 'li\|p'
 
-" Indent 4 spaces in HTML
-autocmd Filetype html setlocal ts=4 sw=4 expandtab"# {{{# {{{# {{{# {{{
-filetype plugin indent on"# }}}# }}}# }}}# }}}
+" Set indentation to 4 spaces in HTML files.
+autocmd Filetype html setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+filetype plugin indent on
 
 " Turn on spell check for markdown files.
 autocmd BufRead,BufNewFile *.md setlocal spell
