@@ -98,6 +98,9 @@ nnoremap <M-h> :vertical resize +5<CR>
 " nnoremap <M-j> :resize -5<CR>
 " nnoremap <M-k> :resize +5<CR>
 
+noremap <silent> <leader>date "=strftime("%F")<CR>p9h
+noremap <silent> <leader>time "=strftime("%X")<CR>p7h
+
 " File explorer.
 nnoremap <silent> <C-p> :Files<CR>
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true } }

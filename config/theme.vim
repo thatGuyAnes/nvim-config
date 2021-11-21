@@ -2,23 +2,23 @@
 "### Importing themes configurations ###
 "## { dracula, gruvbox, ayu, moonlight, solarized8, material, lucario} ##
 "##############################################################################
-source $HOME/.config/nvim/config/themes/gruvbox.vim
+" source $HOME/.config/nvim/config/themes/gruvbox.vim
 source $HOME/.config/nvim/config/themes/dracula.vim
-source $HOME/.config/nvim/config/themes/ayu.vim
-source $HOME/.config/nvim/config/themes/moonlight.vim
-source $HOME/.config/nvim/config/themes/solarized8.vim
-source $HOME/.config/nvim/config/themes/gruvbox8.vim
-source $HOME/.config/nvim/config/themes/onedark.vim
-source $HOME/.config/nvim/config/themes/material.vim
-source $HOME/.config/nvim/config/themes/palenight.vim
-source $HOME/.config/nvim/config/themes/sonokai.vim
-source $HOME/.config/nvim/config/themes/monokaiPro.vim
+" source $HOME/.config/nvim/config/themes/ayu.vim
+" source $HOME/.config/nvim/config/themes/moonlight.vim
+" source $HOME/.config/nvim/config/themes/solarized8.vim
+" source $HOME/.config/nvim/config/themes/gruvbox8.vim
+" source $HOME/.config/nvim/config/themes/onedark.vim
+" source $HOME/.config/nvim/config/themes/material.vim
+" source $HOME/.config/nvim/config/themes/palenight.vim
+" source $HOME/.config/nvim/config/themes/sonokai.vim
+" source $HOME/.config/nvim/config/themes/monokaiPro.vim
 
 " Get the right colors when running Vim inside tmux: see `:h xterm-true-color`
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
+  endif
 
 " Enable true colors support
 if (has("nvim"))
@@ -30,7 +30,11 @@ endif
 
 syntax enable                     " Enables syntax highlighting.
 set background=dark               " Theme bg. {light, dark}.
-colorscheme sonokai               " Color scheme.
+colorscheme dracula               " Color scheme.
+
+
+" For solarized use: 'solarized', 'solarized-high', 'solarized_flat', 'solarized-low'
+" colorscheme solarized-high              " Color scheme.
 
 "##############################################################################
 "### Highlights ###

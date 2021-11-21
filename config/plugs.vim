@@ -15,7 +15,6 @@ Plug 'jiangmiao/auto-pairs'                                          " Insert Cl
 Plug 'tpope/vim-fugitive'                                            " Git wrapper
 Plug 'tpope/vim-commentary'                                          " Comments lines of code or block
 Plug 'tpope/vim-surround'                                            " Anything surrounding
-Plug 'unblevable/quick-scope'                                        " Character highligh when using f,F,t,T
 Plug 'ThePrimeagen/vim-be-good'                                      " vim game to practice basic mvts
 Plug 'kyazdani42/nvim-web-devicons'                                  " Icons
 Plug 'kyazdani42/nvim-tree.lua'                                      " File explorer tree
@@ -29,7 +28,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 " -----------------------------------------------------------------COLOR SCHEMES
 Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'gruvbox-community/gruvbox'
 Plug 'shaunsingh/moonlight.nvim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'lifepillar/vim-gruvbox8'
@@ -41,5 +39,10 @@ Plug 'tomasr/molokai'
 Plug 'sickill/vim-monokai'
 Plug 'WeeSnail/sonokai'
 Plug 'https://gitlab.com/__tpb/monokai-pro.nvim'
+Plug 'gkjgh/cobalt'
+Plug 'tanvirtin/monokai.nvim'
+Plug 'rktjmp/lush.nvim'
+Plug 'ellisonleao/gruvbox.nvim'
+Plug 'ishan9299/nvim-solarized-lua'
 
 call plug#end()

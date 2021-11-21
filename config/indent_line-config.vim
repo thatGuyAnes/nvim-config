@@ -2,8 +2,8 @@ lua << EOF
 -- vim.opt.termguicolors = true
 --vim.cmd [[highlight IndentBlanklineIndent1 guifg=#FFFFFF gui=nocombine]]
 -- line indent highlights.
-vim.cmd [[highlight IndentBlanklineIndent1 guifg=#888888 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent2 guifg=#555555 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#444444 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guifg=#333333 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent3 guifg=#1F83A9 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent4 guifg=#86d642 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent5 guifg=#A13F8F gui=nocombine]]
@@ -16,27 +16,34 @@ vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
 
 vim.opt.list = true
 require("indent_blankline").setup {
-    --char = '▏',
-    char = "│",
-    use_treesitter = false,
-    --show_current_context = true,
-    buftype_exclude = {"terminal"},
-    filetype_exclude = {
-        "NvimTree",
-        "help",
-    },
-    show_trailing_blankline_indent = false,
-    space_char_blankline = " ",
-    show_first_indent_level = true,
-    -- line indent highlights.
-    char_highlight_list = {
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-        "IndentBlanklineIndent1",
-        "IndentBlanklineIndent2",
-    },
+  char = '▏',
+  --char = "│",
+  use_treesitter = true,
+  show_first_indent_level = true,
+  show_current_context = true,
+  context_patterns = {
+    "^for",
+    "^if",
+    "^object",
+    "^table",
+    "^while", "arguments", "block",
+    "catch_clause", "class", "else_clause", "function", "if_statement",
+    "import_statement", "jsx_element", "jsx_element",
+    "jsx_self_closing_element", "method", "operation_type", "return",
+    "try_statement"
+  },
+  show_current_context_start = false,
+  buftype_exclude = {"terminal"},
+  filetype_exclude = {
+    "NvimTree",
+    "help",
+  },
+  show_trailing_blankline_indent = true,
+  space_char_blankline = " ",
+  -- line indent highlights.
+  char_highlight_list = {
+    "IndentBlanklineIndent1",
+  },
 -- settings for background highlight.
 --    char = ' ',
 --    char_highlight_list = {
