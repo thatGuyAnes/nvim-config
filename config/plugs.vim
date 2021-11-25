@@ -6,25 +6,29 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}                      " Completion
-Plug 'junegunn/fzf', { 'do' : { -> fzf#install() } }                 " Fuzzy Search
-Plug 'junegunn/fzf.vim'                                              " ////////////
-Plug 'junegunn/vim-emoji'                                            " Emoji in vim
-Plug 'psliwka/vim-smoothie'                                          " Smooth Scrolling <C-d>&<C-U>
-Plug 'jiangmiao/auto-pairs'                                          " Insert Closing pairs
-Plug 'tpope/vim-fugitive'                                            " Git wrapper
-Plug 'tpope/vim-commentary'                                          " Comments lines of code or block
-Plug 'tpope/vim-surround'                                            " Anything surrounding
-Plug 'ThePrimeagen/vim-be-good'                                      " vim game to practice basic mvts
-Plug 'kyazdani42/nvim-web-devicons'                                  " Icons
-Plug 'kyazdani42/nvim-tree.lua'                                      " File explorer tree
-Plug 'lukas-reineke/indent-blankline.nvim'                           " Indentation lines
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'mboughaba/i3config.vim'                                        " Syntax highlighting for i3 conf file
-Plug 'hoob3rt/lualine.nvim'                                          " Status Line
+"--------------------------------------------------------------------------UTILS
+Plug 'junegunn/fzf', { 'do' : { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-fugitive'
+"-----------------------------------------------------------------------------UI
+Plug 'hoob3rt/lualine.nvim'
+Plug 'junegunn/vim-emoji'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'psliwka/vim-smoothie'
+"------------------------------------------------------------------------EDITING
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'vimwiki/vimwiki'
+"-------------------------------------------------------------------------SYNTAX
+Plug 'mboughaba/i3config.vim'
 Plug 'maxmellon/vim-jsx-pretty'
-
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"------------------------------------------------------------------MISCELLANEOUS
 " -----------------------------------------------------------------COLOR SCHEMES
 Plug 'ayu-theme/ayu-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }

@@ -33,8 +33,8 @@ set background=dark               " Theme bg. {light, dark}.
 colorscheme dracula               " Color scheme.
 
 
-" For solarized use: 'solarized', 'solarized-high', 'solarized_flat', 'solarized-low'
-" colorscheme solarized-high              " Color scheme.
+" set background=light
+" colorscheme solarized8              " Color scheme.
 
 "##############################################################################
 "### Highlights ###
