@@ -1,4 +1,4 @@
-let g:gruvbox_bold = 1
+let g:gruvbox_bold = 0
 let g:gruvbox_filetype_hi_groups = 1
 let g:gruvbox_italics = 1
 let g:gruvbox_italicize_strings = 0

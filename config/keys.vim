@@ -39,13 +39,13 @@ silent! map <unique> <PageUp>   <Plug>(SmoothieBackwards)
 inoremap jj <Esc>
 inoremap JJ <Esc>
 
-" Move current line up/down.
-nnoremap <silent> <A-k> :m-2<CR>==
-nnoremap <silent> <A-j> :m+<CR>==
-vnoremap <silent> <A-k> :m'<-2<CR>gv=gv
-vnoremap <silent> <A-j> :m'>+<CR>gv=gv
-inoremap <silent> <A-k> <Esc>:m-2<CR>==gi
-inoremap <silent> <A-j> <Esc>:m+<CR>==gi
+" Move current line up/down. [: up, ]: down...
+nnoremap <silent> <A-[> :m-2<CR>==
+nnoremap <silent> <A-]> :m+<CR>==
+vnoremap <silent> <A-[> :m'<-2<CR>gv=gv
+vnoremap <silent> <A-]> :m'>+<CR>gv=gv
+inoremap <silent> <A-[> <Esc>:m-2<CR>==gi
+inoremap <silent> <A-]> <Esc>:m+<CR>==gi
 nnoremap <silent> <A-}> :m'}-<CR>
 nnoremap <silent> <A-{> :m'{+<CR>
 
