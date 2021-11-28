@@ -11,7 +11,7 @@ source $HOME/.config/nvim/config/themes/dracula.vim
 " source $HOME/.config/nvim/config/themes/onedark.vim
 " source $HOME/.config/nvim/config/themes/material.vim
 " source $HOME/.config/nvim/config/themes/palenight.vim
-" source $HOME/.config/nvim/config/themes/sonokai.vim
+source $HOME/.config/nvim/config/themes/sonokai.vim
 " source $HOME/.config/nvim/config/themes/monokaiPro.vim
 
 " Get the right colors when running Vim inside tmux: see `:h xterm-true-color`
@@ -31,9 +31,9 @@ endif
 syntax enable                     " Enables syntax highlighting.
 set background=dark               " Theme bg. {light, dark}.
 colorscheme dracula               " Color scheme.
+" colorscheme sonokai               " Color scheme.
 
 
-" set background=light
 " colorscheme solarized8              " Color scheme.
 
 "##############################################################################

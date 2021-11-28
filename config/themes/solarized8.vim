@@ -4,7 +4,7 @@
 " solarized8_flat: flat variant;
 
 " `normal` (default), `low`, `high`;
-let g:solarized_visibility = 'high'
+let g:solarized_visibility = 'normal'
 
 " `normal` (default), `low`, `high`;
 let g:solarized_diffmode = 'normal'
