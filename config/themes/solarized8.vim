@@ -4,13 +4,13 @@
 " solarized8_flat: flat variant;
 
 " `normal` (default), `low`, `high`;
-let g:solarized_visibility = 'high'
+let g:solarized_visibility = 'normal'
 
 " `normal` (default), `low`, `high`;
 let g:solarized_diffmode = 'normal'
 
 " make terminal background transparent if set to 1 (default: 0).
-let g:solarized_termtrans = 0
+let g:solarized_termtrans = 1
 
 " `normal` (default), `low` or `flat`;
 let g:solarized_statusline = 'normal'

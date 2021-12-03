@@ -24,7 +24,7 @@ set relativenumber                      " Line numbers relative to the current l
 set scrolloff=10                        " Always show x number of lines when scrolling.
 " set scroll=5                            " Number of lines to scroll by.
 " set sidescroll=999                        " Number of columns to scroll horizontaly offscreen.
-set shiftwidth=4                       " Number of space characters used for indentation.
+set shiftwidth=2                       " Number of space characters used for indentation.
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set showtabline=0                       " Show tabs (default 0:never, 1: more than one window, 2:always)
 set sidescrolloff=10
@@ -32,13 +32,13 @@ set signcolumn=yes                      " Enables sign colomn.
 set smartcase                           " Enables case sensitivity when using uppercases.
 set smartindent                         " Shrewder and better auto indentation.
 set smarttab                            " Better IQ for tabs.
-set softtabstop=4                       " Number of spaces that <Tab> uses when editing.
+set softtabstop=2                       " Number of spaces that <Tab> uses when editing.
 set splitbelow                          " Horizontal splits to the bottom.
 set splitright                          " Vertical splits to the right.
 syntax on
 filetype plugin on
 set nocompatible
-set tabstop=4                           " Tabs are 2 spaces.
+set tabstop=2                           " Tabs are 2 spaces.
 set timeoutlen=500                      " Time to wait for a mapped sequence to complete.
 set updatetime=300                      " faster completion.
 set guicursor=i:block                   " Set cursor to block.
