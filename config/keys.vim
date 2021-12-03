@@ -49,6 +49,8 @@ inoremap <silent> <A-]> <Esc>:m+<CR>==gi
 nnoremap <silent> <A-}> :m'}-<CR>
 nnoremap <silent> <A-{> :m'{+<CR>
 
+map gf :edit <cfile><cr>
+
 " If you use Vim in a terminal, pressing alt will send an escape character
 " followed by the normal_mode_key that you pressed, removing the need to press
 " escape yourself.
@@ -90,8 +92,8 @@ nnoremap <leader>fw :wincmd \|<CR>
 " Vertical resize
 " nnoremap <Leader>rl :vertical resize +5<CR>
 " nnoremap <Leader>rh :vertical resize -5<CR>
-nnoremap <M-l> :vertical resize -5<CR>
-nnoremap <M-h> :vertical resize +5<CR>
+nnoremap <leader>- :vertical resize -5<CR>
+nnoremap <leader>+ :vertical resize +5<CR>
 
 " I don't necessary need this.
 " Horizontal resize

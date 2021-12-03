@@ -51,7 +51,7 @@ set guicursor=i-c:block-iCursor-blinkwait300-blinkon200-blinkoff150
 let g:html_indent_tags = 'li\|p'
 
 " Set indentation to 4 spaces in HTML files.
-autocmd Filetype html setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype html setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " Turn on spell check for markdown files.
 autocmd BufRead,BufNewFile *.md setlocal spell
