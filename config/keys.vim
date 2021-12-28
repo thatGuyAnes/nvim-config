@@ -21,6 +21,9 @@ noremap <C-h> 10h
 nnoremap <silent> <C-j> 5j
 nnoremap <silent> <C-k> 5k
 
+nnoremap <silent> j gj
+nnoremap <silent> k gk
+
 " Smooth scrolling: vim-smoothie setup.
 let g:smoothie_no_default_mappings = v:true
 silent! map <unique> <C-D>      <Plug>(SmoothieDownwards)
@@ -30,6 +33,17 @@ silent! map <unique> <S-Down>   <Plug>(SmoothieForwards)
 silent! map <unique> <PageDown> <Plug>(SmoothieForwards)
 silent! map <unique> <PageUp>   <Plug>(SmoothieBackwards)
 
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nnoremap <leader>bc :<c-u>bp <bar> bd #<cr>
+
+
+" Close all buffers except current one.
+nnoremap <leader>bd :<c-u>up <bar> %bd <bar> e#<cr>
+
+" Show all open buffers and their status
+nnoremap <leader>bl :ls<cr>
 
 "###############################################################################
 "### EDITING ###
@@ -78,8 +92,8 @@ vnoremap > >gv
 " VISUAL + S + <NEW> ----> surround selection
 
 " Commentary
-nnoremap <leader>/ :Commentary<CR>
-vnoremap <leader>/ :Commentary<CR>
+nnoremap <leader>/ :CommentToggle<CR>
+vnoremap <leader>/ :CommentToggle<CR>
 
 "###############################################################################
 "### LAYOUT ###

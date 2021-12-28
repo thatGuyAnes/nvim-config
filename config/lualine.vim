@@ -18,15 +18,35 @@ require'lualine'.setup {
         path = 1 -- 0 = just filename, 1 = relative path, 2 = absolute path
       }
       },
-    lualine_x = {'filetype'},
-    lualine_y = {},
-    lualine_z = {'location'}
+    lualine_x = {
+      {
+        'buffers',
+        show_filename_only = true, -- shows shortened relative path when false
+        show_modified_status = true, -- shows indicator then buffer is modified
+        mode = 0, -- 0 shows buffer name
+        max_length = vim.o.columns * 2 / 3, -- maximum width of buffers component
+        filetype_names = {
+          TelescopePrompt = 'Telescope',
+          dashboard = 'Dashboard',
+          packer = 'Packer',
+          fzf = 'FZF',
+          alpha = 'Alpha'
+        }, -- shows specific buffer name for that filetype ( { `filetype` = `buffer_name`, ... } )
+        buffers_color = {
+          -- Same values like general color option can be used here.
+          active = 'lualine_{section}_normal', -- color for active buffer
+          inactive = 'lualine_{section}_inactive', -- color for inactive buffer
+        },
+      },
+    },
+    lualine_y = {'location', 'progress'},
+    lualine_z = {'filetype'}
   },
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {},
-    lualine_x = {'filename'},
+    lualine_c = {'filename'},
+    lualine_x = {},
     lualine_y = {},
     lualine_z = {}
   },
