@@ -1,7 +1,7 @@
 "empty by default
 " let g:nvim_tree_ignore = [ '.git','.cache' ]
 "0 by default
-let g:nvim_tree_gitignore = 0
+" let g:nvim_tree_gitignore = 0
 "0 by default, closes the tree when you open a file
 let g:nvim_tree_quit_on_open = 0
 "0 by default, this option shows indent markers when folders are open

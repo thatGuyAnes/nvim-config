@@ -4,3 +4,4 @@ with-lsp/
 notes.md
 .git
 config/lsp.vim
+colors/dracula
