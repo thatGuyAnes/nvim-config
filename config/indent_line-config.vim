@@ -1,6 +1,6 @@
 lua << EOF
 -- vim.opt.termguicolors = true
---vim.cmd [[highlight IndentBlanklineIndent1 guifg=#FFFFFF gui=nocombine]]
+-- vim.cmd [[highlight IndentBlanklineIndent1 guifg=#FFFFFF gui=nocombine]]
 -- line indent highlights.
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#444444 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineIndent2 guifg=#333333 gui=nocombine]]
@@ -17,10 +17,15 @@ vim.cmd [[highlight IndentBlanklineIndent6 guifg=#C678DD gui=nocombine]]
 vim.opt.list = true
 require("indent_blankline").setup {
   char = '▏',
-  --char = "│",
+  -- char = "│",
+  char_highlight_list = {
+    "IndentBlanklineIndent1",
+  },
   use_treesitter = true,
   show_first_indent_level = true,
   show_current_context = true,
+  -- show_current_context_start = true,
+  show_trailing_blankline_indent = false,
   context_patterns = {
     "^for",
     "^if",
@@ -32,18 +37,12 @@ require("indent_blankline").setup {
     "jsx_self_closing_element", "method", "operation_type", "return",
     "try_statement"
   },
-  show_current_context_start = false,
   buftype_exclude = {"terminal"},
   filetype_exclude = {
     "NvimTree",
     "help",
   },
-  show_trailing_blankline_indent = true,
   space_char_blankline = " ",
-  -- line indent highlights.
-  char_highlight_list = {
-    "IndentBlanklineIndent1",
-  },
 -- settings for background highlight.
 --    char = ' ',
 --    char_highlight_list = {

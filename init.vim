@@ -6,14 +6,16 @@ source $HOME/.config/nvim/config/coc-config.vim               " coc-config
 source $HOME/.config/nvim/config/theme.vim                    " Theming
 source $HOME/.config/nvim/config/nvim-tree.vim                " nvimTree config
 source $HOME/.config/nvim/config/indent_line-config.vim       " Line indentation config
-source $HOME/.config/nvim/config/lualine.vim                  " Status Line
+" source $HOME/.config/nvim/config/lualine.vim                  " Status Line
 source $HOME/.config/nvim/config/floaterm.vim                 " floaterm
 
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 
-lua << EOF
+let g:vim_jsx_pretty_colorful_config = 1 " default 0
+let g:vim_jsx_pretty_highlight_close_tag = 1
 
+lua << EOF
 -- local ft_str =
 --   table.concat(
 --   vim.tbl_map(
@@ -25,9 +27,8 @@ lua << EOF
 --   ","
 --   )
 -- vim.cmd("autocmd Filetype " .. ft_str .. " setlocal foldmethod=expr foldexpr=nvim_treesitter#foldexpr()")
-
-
 require 'colorizer'.setup()
+
 require('nvim_comment').setup({
   -- Linters prefer comment and line to have a space in between markers
   marker_padding = true,
@@ -41,10 +42,11 @@ require('nvim_comment').setup({
   operator_mapping = "gc",
   -- Hook function to call before commenting takes place
   hook = function()
-    require("ts_context_commentstring.internal").update_commentstring()
-    -- if vim.api.nvim_buf_get_option(0, "filetype") == "javascriptreact" then
-      -- require("ts_context_commentstring.internal").update_commentstring()
-    -- end
+    --require("ts_context_commentstring.internal").update_commentstring()
+     if vim.api.nvim_buf_get_option(0, "filetype") == "javascriptreact" then
+       require("ts_context_commentstring.internal").update_commentstring()
+     end
   end
 })
+
 EOF

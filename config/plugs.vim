@@ -27,21 +27,18 @@ Plug 'tpope/vim-surround'
 Plug 'vimwiki/vimwiki'
 Plug 'terrortylor/nvim-comment'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'editorconfig/editorconfig-vim'
 "-------------------------------------------------------------------------SYNTAX
 Plug 'mboughaba/i3config.vim'
+Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "------------------------------------------------------------------MISCELLANEOUS
 " -----------------------------------------------------------------COLOR SCHEMES
 Plug 'ayu-theme/ayu-vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'shaunsingh/moonlight.nvim'
-Plug 'arcticicestudio/nord-vim'
 Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'tomasr/molokai'
-Plug 'sickill/vim-monokai'
-Plug 'WeeSnail/sonokai'
 Plug 'https://gitlab.com/__tpb/monokai-pro.nvim'
 Plug 'gkjgh/cobalt'
 Plug 'tanvirtin/monokai.nvim'
@@ -50,5 +47,9 @@ Plug 'ellisonleao/gruvbox.nvim'
 Plug 'ishan9299/nvim-solarized-lua'
 Plug 'olimorris/onedarkpro.nvim'
 Plug 'mhartington/oceanic-next'
+Plug 'thatGuyAnes/Belmonts'
+Plug 'Mofiqul/dracula.nvim'
+Plug 'yonlu/omni.vim'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 call plug#end()
