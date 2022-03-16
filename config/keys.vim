@@ -95,6 +95,9 @@ vnoremap > >gv
 nnoremap <leader>/ :CommentToggle<CR>
 vnoremap <leader>/ :CommentToggle<CR>
 
+" Git
+nnoremap <leader>g :Git<cr>
+
 "###############################################################################
 "### LAYOUT ###
 "###############################################################################

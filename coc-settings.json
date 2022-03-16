@@ -5,12 +5,14 @@
   "diagnostic.infoSign": "",
   "eslint.run": "onType",
   "eslint.packageManager": "npm",
+  "eslint.autoFixOnSave": true,
   "eslint.probe": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "html"
+    "html",
+    "json"
   ],
   "html.autoClosingTags": true,
   "javascript.autoClosingTags": true,
@@ -31,15 +33,9 @@
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
-      "args": [
-        "start"
-      ],
-      "filetypes": [
-        "sh"
-      ],
-      "ignoredRootPaths": [
-        "~"
-      ]
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
     }
   },
   "suggest.completionItemKindLabels": {
@@ -68,5 +64,7 @@
     "unit": " 塞 ",
     "value": "  ",
     "variable": "[]"
-  }
+  },
+  "prettier.singleQuote": true,
+  "prettier.bracketSpacing": true
 }

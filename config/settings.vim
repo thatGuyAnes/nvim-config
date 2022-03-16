@@ -45,17 +45,16 @@ filetype plugin on
 set nocompatible
 set timeoutlen=500                      " Time to wait for a mapped sequence to complete.
 set updatetime=300                      " faster completion.
-set guicursor=i:block                   " Set cursor to block.
-" set winblend=30                         " Floating windows transparency.
+" set guicursor=i:block                  " Set cursor to block.
 " Blinking cursor in insert mode + horizontal cursor in visual and replace mode.
-" set guicursor=i-c:ver300-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor50
-set guicursor=i-c:block-iCursor-blinkwait300-blinkon200-blinkoff150
+" set guicursor=i-c:block-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor50
+set guicursor=i-c:ver50-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor50
 
 " Treat <li> and <p> tags like the block tags they are.
 let g:html_indent_tags = 'li\|p'
 
 " Set indentation to 4 spaces in HTML files.
-autocmd Filetype html setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+autocmd Filetype html setlocal tabstop=4 shiftwidth=4 softtabstop=2 expandtab
 
 " Turn on spell check for markdown files.
 autocmd BufRead,BufNewFile *.md setlocal spell
