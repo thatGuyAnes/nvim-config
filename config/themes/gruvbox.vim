@@ -1,6 +1,5 @@
 " Full config at:
 " https://github.com/morhetz/gruvbox/wiki/Configuration
-
 lua << EOF
 vim.g.gruvbox_bold = false
 vim.g.gruvbox_italic = false
