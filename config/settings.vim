@@ -62,6 +62,7 @@ set complete+=kspell
 " spelllan=en_us
 
 " Emoji in markdown using vim-emoji plugin:
+" Completion with Ctrl-x Ctrl-u (i.e: :smi<ctrl-x><ctrl-u>)
 augroup emoji_complete
     autocmd!
     autocmd Filetype markdown setlocal completefunc=emoji#complete

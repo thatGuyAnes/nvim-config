@@ -2,15 +2,17 @@
 "### Importing themes configurations ###
 "## { dracula, gruvbox, ayu, moonlight, solarized8, material, lucario} ##
 "##############################################################################
-source $HOME/.config/nvim/config/themes/gruvbox.vim
-source $HOME/.config/nvim/config/themes/solarized.vim
-source $HOME/.config/nvim/config/themes/dracula.vim
-source $HOME/.config/nvim/config/themes/material.vim
-source $HOME/.config/nvim/config/themes/palenight.vim
-source $HOME/.config/nvim/config/themes/sonokai.vim
-source $HOME/.config/nvim/config/themes/monokaiPro.vim
+" source $HOME/.config/nvim/config/themes/gruvbox.vim
+" source $HOME/.config/nvim/config/themes/solarized.vim
+" source $HOME/.config/nvim/config/themes/solarized2.vim
+source $HOME/.config/nvim/config/themes/solarized8.vim
+" source $HOME/.config/nvim/config/themes/dracula.vim
+" source $HOME/.config/nvim/config/themes/material.vim
+" source $HOME/.config/nvim/config/themes/palenight.vim
+" source $HOME/.config/nvim/config/themes/sonokai.vim
+" source $HOME/.config/nvim/config/themes/monokaiPro.vim
 " source $HOME/.config/nvim/config/themes/onedark.vim
-source $HOME/.config/nvim/config/themes/oceanicNext.vim
+" source $HOME/.config/nvim/config/themes/oceanicNext.vim
 
 " Get the right colors when running Vim inside tmux: see `:h xterm-true-color`
 if exists('+termguicolors')
@@ -34,9 +36,10 @@ set background=dark
 
 " colorscheme OceanicNext
 " colorscheme dracula
-colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme sonokai
 " colorscheme material
+colorscheme solarized8_high
 
 " set background=light
 " colorscheme solarized-high
@@ -45,9 +48,9 @@ colorscheme gruvbox
 "### Highlights ###
 "##############################################################################
 
-hi Normal       guibg=none      ctermbg=none          " Removes bg.
+" hi Normal       guibg=none      ctermbg=none          " Removes bg.
 " hi CursorLineNr guibg=none      gui=bold              " Cursorline numbers bg.
-hi CursorLineNr guifg=#5eacd3   ctermfg=none          " Cursorline numbers fg.
+" hi CursorLineNr guifg=#5eacd3   ctermfg=none          " Cursorline numbers fg.
 " hi CursorLine   guibg=none      ctermbg=none          " Cursor line bg.
 " hi LineNr       guibg=none      ctermbg=none          " Line numbers bg.
 " hi LineNr       guifg=#5eacd3   ctermfg=Grey          " Line numbers fg.
