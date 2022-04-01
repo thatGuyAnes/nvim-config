@@ -63,7 +63,26 @@ inoremap <silent> <A-]> <Esc>:m+<CR>==gi
 nnoremap <silent> <A-}> :m'}-<CR>
 nnoremap <silent> <A-{> :m'{+<CR>
 
-map gf :edit <cfile><cr>
+" Expand gf to Create and open file if it doesn't exist.
+" map gf :edit <cfile><cr>
+" This solve the problem with the buffer directory.
+noremap <leader>gf :call CreateFile(expand("<cfile>"))<CR>
+function! CreateFile(tfilename)
+
+    " complete filepath from the file where this is called
+    let newfilepath=expand('%:p:h') .'/'. expand(a:tfilename)
+
+    if filereadable(newfilepath)
+       echo "File already exists"
+       :norm gf
+    else
+        " create file and gf
+        :execute "!touch ". expand(newfilepath)
+        echom "File created: ". expand(newfilepath)
+        :norm gf
+    endif
+
+endfunction
 
 " If you use Vim in a terminal, pressing alt will send an escape character
 " followed by the normal_mode_key that you pressed, removing the need to press
@@ -97,6 +116,10 @@ vnoremap <leader>/ :CommentToggle<CR>
 
 " Git
 nnoremap <leader>g :Git<cr>
+
+" Forward delete in insert mode, alternative to 'ctrl-o + x' or pressing the
+" del key. There is also the 'shift-c' to delete to the end of line.
+inoremap <C-d> <Del>
 
 "###############################################################################
 "### LAYOUT ###

@@ -46,4 +46,10 @@ Plug 'olimorris/onedarkpro.nvim'
 Plug 'mhartington/oceanic-next'
 Plug 'thatGuyAnes/Belmonts'
 Plug 'Mofiqul/dracula.nvim'
+
+
+Plug 'shaunsingh/solarized.nvim'
+Plug 'lifepillar/vim-solarized8'
+
+
 call plug#end()
