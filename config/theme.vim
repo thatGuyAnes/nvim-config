@@ -5,14 +5,10 @@
 source $HOME/.config/nvim/config/themes/gruvbox.vim
 source $HOME/.config/nvim/config/themes/solarized.vim
 source $HOME/.config/nvim/config/themes/dracula.vim
-" source $HOME/.config/nvim/config/themes/ayu.vim
-" source $HOME/.config/nvim/config/themes/moonlight.vim
-" source $HOME/.config/nvim/config/themes/solarized8.vim
-" source $HOME/.config/nvim/config/themes/material.vim
-" source $HOME/.config/nvim/config/themes/palenight.vim
+source $HOME/.config/nvim/config/themes/material.vim
+source $HOME/.config/nvim/config/themes/palenight.vim
 source $HOME/.config/nvim/config/themes/sonokai.vim
 source $HOME/.config/nvim/config/themes/monokaiPro.vim
-source $HOME/.config/nvim/config/themes/catppuccin.vim
 " source $HOME/.config/nvim/config/themes/onedark.vim
 source $HOME/.config/nvim/config/themes/oceanicNext.vim
 
@@ -33,19 +29,25 @@ endif
 " let g:belmont_colorterm = 0
 syntax enable
 set background=dark
-colorscheme dracula
-" colorscheme gruvbox
-" colorscheme sonokai
 " colorscheme monokaipro
+" colorscheme palenight
+
 " colorscheme OceanicNext
+" colorscheme dracula
+colorscheme gruvbox
+" colorscheme sonokai
+" colorscheme material
+
+" set background=light
 " colorscheme solarized-high
+" colorscheme ayu
 "##############################################################################
 "### Highlights ###
 "##############################################################################
 
-" hi Normal       guibg=none      ctermbg=none          " Removes bg.
+hi Normal       guibg=none      ctermbg=none          " Removes bg.
 " hi CursorLineNr guibg=none      gui=bold              " Cursorline numbers bg.
-" hi CursorLineNr guifg=#50fa7b   ctermfg=none          " Cursorline numbers fg.
+hi CursorLineNr guifg=#5eacd3   ctermfg=none          " Cursorline numbers fg.
 " hi CursorLine   guibg=none      ctermbg=none          " Cursor line bg.
 " hi LineNr       guibg=none      ctermbg=none          " Line numbers bg.
 " hi LineNr       guifg=#5eacd3   ctermfg=Grey          " Line numbers fg.
@@ -62,3 +64,4 @@ colorscheme dracula
 
 " set termguicolors                 " Enables true colors.
 " set t_ut=
+

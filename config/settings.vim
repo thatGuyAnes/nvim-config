@@ -25,7 +25,7 @@ set incsearch                           " Shows the matched charcters when searc
 set laststatus=2                        " Statusline even there's only one window ALWAYS!!!
 set mouse+=a                            " Enables mouse support.
 set nohlsearch                          " No highlights after searching is done.
-set noshowmode                          " Remove mode information (unnecessary because it's displayed in the statusline)
+set showmode                          " Remove mode information (unnecessary because it's displayed in the statusline)
 set nowrap                              " Disables line wrapping.
 set nu                                  " Enables line numbers.
 set relativenumber                      " Line numbers relative to the current line.
@@ -73,3 +73,19 @@ augroup END
 let g:vimwiki_list = [{'path': '~/Personal/wiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_global_ext = 0
+
+
+
+" setting the filetype as jsx for files that end in .js
+augroup filetype_jsx
+    autocmd!
+    autocmd FileType javascript set filetype=javascriptreact
+augroup END
+
+
+" autocmd Filetype NvimTree setlocal tabstop=1 shiftwidth=1 softtabstop=1 expandtab
+" augroup filetype_NvimTree
+"   autocmd!
+"   setlocal tabstop=5 shiftwidth=5 softtabstop=5
+" augroup END
+

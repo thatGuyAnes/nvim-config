@@ -17,7 +17,7 @@ Plug 'hoob3rt/lualine.nvim'
 Plug 'junegunn/vim-emoji'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'lukas-reineke/indent-blankline.nvim'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'psliwka/vim-smoothie'
 "------------------------------------------------------------------------EDITING
@@ -35,12 +35,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "------------------------------------------------------------------MISCELLANEOUS
 " -----------------------------------------------------------------COLOR SCHEMES
-Plug 'ayu-theme/ayu-vim'
-Plug 'shaunsingh/moonlight.nvim'
 Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'https://gitlab.com/__tpb/monokai-pro.nvim'
-Plug 'gkjgh/cobalt'
 Plug 'tanvirtin/monokai.nvim'
 Plug 'rktjmp/lush.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
@@ -49,7 +46,4 @@ Plug 'olimorris/onedarkpro.nvim'
 Plug 'mhartington/oceanic-next'
 Plug 'thatGuyAnes/Belmonts'
 Plug 'Mofiqul/dracula.nvim'
-Plug 'yonlu/omni.vim'
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-
 call plug#end()
