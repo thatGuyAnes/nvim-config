@@ -1,8 +1,11 @@
 lua << EOF
 -- The theme comes with six filters, default, machine, ristretto, octogon spectrum, and classic
 -- default: --default--
+
 -- vim.g.monokaipro_filter = "octogon"
-vim.g.monokaipro_filter = "default"
+ vim.g.monokaipro_filter = "spectrum"
+-- vim.g.monokaipro_filter = "machine"
+-- vim.g.monokaipro_filter = "ristretto"
 
 -- Configure the colors used when opening a :terminal in Neovim
 -- default: true
@@ -10,11 +13,11 @@ vim.g.monokaipro_terminal_colors = true
 
 -- Make comments italic
 -- default: true
-vim.g.monokaipro_italic_comments = true
+vim.g.monokaipro_italic_comments = false
 
 -- Make keywords italic
 -- true
-vim.g.monokaipro_italic_keywords = false
+vim.g.monokaipro_italic_keywords = true
 
 -- Make functions italic
 -- false
@@ -26,7 +29,7 @@ vim.g.monokaipro_italic_variables = false
 
 -- Enable this to disable setting the background color
 -- false
-vim.g.monokaipro_transparent = true
+vim.g.monokaipro_transparent = false
 
 -- Enabling this option, will hide inactive statuslines and replace them with a
 -- thin border instead. Should work with the standard StatusLine and LuaLine.
@@ -52,7 +55,9 @@ vim.g.monokaipro_flat_term = false
 -- You can override specific color groups to use other groups or a hex color
 -- {}
 vim.g.monokaipro_colors = {
-  hint = "orange",
+  hint = "cyan",
+  -- TSPunctBracket = "red",
   -- bg = "#403e41"
+  bg = "#000000"
   }
 EOF

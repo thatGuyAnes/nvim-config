@@ -5,7 +5,7 @@ source $HOME/.config/nvim/config/treeSitter.vim               " Tree Shitter
 source $HOME/.config/nvim/config/coc-config.vim               " coc-config
 source $HOME/.config/nvim/config/theme.vim                    " Theming
 source $HOME/.config/nvim/config/nvim-tree.vim                " nvimTree config
-source $HOME/.config/nvim/config/indent_line-config.vim       " Line indentation config
+" source $HOME/.config/nvim/config/indent_line-config.vim       " Line indentation config
 " source $HOME/.config/nvim/config/lualine.vim                  " Status Line
 source $HOME/.config/nvim/config/floaterm.vim                 " floaterm
 

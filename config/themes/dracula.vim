@@ -8,7 +8,8 @@
 lua << EOF
 -- customize dracula color palette
 vim.g.dracula_colors = {
-  bg = "#282A36",
+  -- bg = "#282A36",
+  bg = "#000000",
   fg = "#F8F8F2",
   selection = "#44475A",
   comment = "#6272A4",
@@ -34,7 +35,7 @@ vim.g.dracula_colors = {
 -- show the '~' characters after the end of buffers
 vim.g.dracula_show_end_of_buffer = true
 -- use transparent background
--- vim.g.dracula_transparent_bg = true
+vim.g.dracula_transparent_bg = false
 -- set custom lualine background color
 -- vim.g.dracula_lualine_bg_color = "#44475a"
 -- vim.g.dracula_lualine_bg_color = "#FF5555"

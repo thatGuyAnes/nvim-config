@@ -4,7 +4,7 @@
 " " let g:nvim_tree_gitignore = 0
 " "0 by default, closes the tree when you open a file
 " "0 by default, this option shows indent markers when folders are open
-" let g:nvim_tree_indent_markers = 0
+let g:nvim_tree_indent_markers = 1
 " "0 by default, will enable file highlight for git attributes (can be used without the icons).
 " let g:nvim_tree_git_hl = 1
 " "0 by default, will enable folder and file icon highlight for opened files/directories.
@@ -49,12 +49,12 @@
 " "if nvim-web-devicons is installed and on your runtimepath.
 " "if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
 " "but this will not work when you set indent_markers (because of UI conflict)
-" let g:nvim_tree_show_icons = {
-"     \ 'git': 1,
-"     \ 'folders': 1,
-"     \ 'files': 1,
-"     \ 'folder_arrows': 1,
-"     \ }
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 1,
+    \ 'files': 1,
+    \ 'folder_arrows': 1,
+    \ }
 " 
 " " default will show icon by default if no icon is provided
 " " default shows no icon by default
@@ -115,7 +115,7 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
       hijack_unnamed_buffer_when_opening = false,
       diagnostics          = {
         enable = false,
-        show_on_dirs = false,
+        show_on_dirs = true,
         icons = {
           hint = "",
           info = "",
@@ -134,7 +134,7 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
       },
       git = {
         enable = true,
-        ignore = true,
+        ignore = false,
       },
       view = {
         width = 30,
