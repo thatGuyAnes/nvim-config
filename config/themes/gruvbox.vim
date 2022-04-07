@@ -5,14 +5,14 @@
 
 
 lua << EOF
-vim.g.gruvbox_bold                  = false
-vim.g.gruvbox_italic                = false
-vim.g.gruvbox_transparent_bg        = 1
+vim.g.gruvbox_bold                  = true
+vim.g.gruvbox_italic                = true
+vim.g.gruvbox_transparent_bg        = 0
 vim.g.gruvbox_underline             = true
 vim.g.gruvbox_undercurl             = true
 vim.g.gruvbox_termcolors            = 256
 vim.g.gruvbox_contrast_dark         = 'hard'   --soft, medium, hard
-vim.g.gruvbox_contrast_light        = 'hard'
+vim.g.gruvbox_contrast_light        = 'soft'
 vim.g.gruvbox_hls_cursor            = "red"
 vim.g.gruvbox_color_column          = 'bg1'    -- default: bg1
 vim.g.gruvbox_sign_column           = 'bg0'

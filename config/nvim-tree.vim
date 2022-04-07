@@ -82,16 +82,11 @@ let g:nvim_tree_icons = {
     \   }
     \ }
 
-" NvimTreeOpen, NvimTreeClose, NvimTreeFocus and NvimTreeResize are also available if you need them
-nnoremap <C-n> :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
-
 " this variable must be enabled for colors to be applied properly
 " set termguicolors
 
 " a list of groups can be found at `:help nvim_tree_highlight`
-" highlight NvimTreeFolderIcon guibg=blue
+highlight NvimTreeFolderIcon guifg=cyan ctermfg=cyan
 
 lua << EOF
 -- following options are the default
@@ -106,7 +101,7 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
         enable = true,
         auto_open = true,
       },
-      auto_close           = true,
+      -- auto_close           = true,
       auto_reload_on_write = true,
       open_on_tab          = true,
       sort_by              = "name",
@@ -114,8 +109,8 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
       update_cwd           = false,
       hijack_unnamed_buffer_when_opening = false,
       diagnostics          = {
-        enable = false,
-        show_on_dirs = true,
+        enable = true,
+        show_on_dirs = false,
         icons = {
           hint = "",
           info = "",
@@ -124,7 +119,7 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
         }
       },
       update_focused_file = {
-        enable      = false,
+        enable      = true,
         update_cwd  = false,
         ignore_list = {}
       },
@@ -179,10 +174,9 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
           { key = "s",                            cb = tree_cb("system_open") },
           { key = "q",                            cb = tree_cb("close") },
           { key = "g?",                           cb = tree_cb("toggle_help") },
-               }
+          }
         }
       },
-
       filters = {
         dotfiles = false,
         custom = {}

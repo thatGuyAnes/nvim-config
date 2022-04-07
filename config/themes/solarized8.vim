@@ -10,7 +10,7 @@ let g:solarized_visibility = 'high'
 let g:solarized_diffmode = 'high'
 
 " make terminal background transparent if set to 1 (default: 0).
-let g:solarized_termtrans = 1
+let g:solarized_termtrans = 0
 
 " `normal` (default), `low` or `flat`;
 let g:solarized_statusline = 'normal'
@@ -24,7 +24,7 @@ let g:solarized_italics = 0
 let g:solarized_old_cursor_style = 0
 
 " set to 1 to force using your 16 ANSI terminal colors.
-let g:solarized_use16 = 1
+let g:solarized_use16 = 0
 
 " set to 1 to enable Solarized filetype-specific syntax highlighting groups
 " (default is 0). Please be aware that if your Vim is not recent enough you

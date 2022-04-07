@@ -34,7 +34,7 @@ set scrolloff=2                        " Always show x number of lines when scro
 " set sidescroll=999                        " Number of columns to scroll horizontaly offscreen.
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set showtabline=0                       " Show tabs (default 0:never, 1: more than one window, 2:always)
-set sidescrolloff=10
+set sidescrolloff=999
 set signcolumn=yes                      " Enables sign colomn.
 set smartcase                           " Enables case sensitivity when using uppercases.
 set smartindent                         " Shrewder and better auto indentation.
@@ -45,6 +45,10 @@ filetype plugin on
 set nocompatible
 set timeoutlen=500                      " Time to wait for a mapped sequence to complete.
 set updatetime=300                      " faster completion.
+if has('wildmemu')
+  set wildmenu
+  set wildchar=<TAB>
+endif
 " set guicursor=i:block                  " Set cursor to block.
 " Blinking cursor in insert mode + horizontal cursor in visual and replace mode.
 " set guicursor=i-c:block-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor50
@@ -74,7 +78,6 @@ augroup END
 let g:vimwiki_list = [{'path': '~/Personal/wiki/',
                       \ 'syntax': 'markdown', 'ext': '.md'}]
 let g:vimwiki_global_ext = 0
-
 
 
 " setting the filetype as jsx for files that end in .js

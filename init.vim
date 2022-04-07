@@ -1,15 +1,16 @@
 source $HOME/.config/nvim/config/plugs.vim                    " vim-plug
 source $HOME/.config/nvim/config/keys.vim                     " Keymaps
 source $HOME/.config/nvim/config/settings.vim                 " General settings
+source $HOME/.config/nvim/config/theme.vim                    " Theming
 source $HOME/.config/nvim/config/treeSitter.vim               " Tree Shitter
 source $HOME/.config/nvim/config/coc-config.vim               " coc-config
-source $HOME/.config/nvim/config/theme.vim                    " Theming
 source $HOME/.config/nvim/config/nvim-tree.vim                " nvimTree config
+source $HOME/.config/nvim/config/lualine.vim                  " Status Line
 " source $HOME/.config/nvim/config/indent_line-config.vim       " Line indentation config
-" source $HOME/.config/nvim/config/lualine.vim                  " Status Line
 source $HOME/.config/nvim/config/floaterm.vim                 " floaterm
 
 set foldmethod=expr
+set foldmarker={,}
 set foldexpr=nvim_treesitter#foldexpr()
 
 let g:vim_jsx_pretty_colorful_config = 1 " default 0
@@ -28,7 +29,6 @@ lua << EOF
 --   )
 -- vim.cmd("autocmd Filetype " .. ft_str .. " setlocal foldmethod=expr foldexpr=nvim_treesitter#foldexpr()")
 require 'colorizer'.setup()
-
 require('nvim_comment').setup({
   -- Linters prefer comment and line to have a space in between markers
   marker_padding = true,
@@ -48,5 +48,4 @@ require('nvim_comment').setup({
      end
   end
 })
-
 EOF
