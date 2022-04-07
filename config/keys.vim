@@ -45,6 +45,13 @@ nnoremap <leader>bd :<c-u>up <bar> %bd <bar> e#<cr>
 " Show all open buffers and their status
 nnoremap <leader>bl :ls<cr>
 
+
+" NvimTreeOpen, NvimTreeClose, NvimTreeFocus and NvimTreeResize are also available if you need them
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+
+
 "###############################################################################
 "### EDITING ###
 "###############################################################################
@@ -64,7 +71,7 @@ nnoremap <silent> <A-}> :m'}-<CR>
 nnoremap <silent> <A-{> :m'{+<CR>
 
 " Expand gf to Create and open file if it doesn't exist.
-" map gf :edit <cfile><cr>
+map gf :edit <cfile><cr>
 " This solve the problem with the buffer directory.
 noremap <leader>gf :call CreateFile(expand("<cfile>"))<CR>
 function! CreateFile(tfilename)
@@ -143,9 +150,11 @@ nnoremap <leader>+ :vertical resize +5<CR>
 noremap <silent> <leader>date "=strftime("%F")<CR>p9h
 noremap <silent> <leader>time "=strftime("%X")<CR>p7h
 
-" File explorer.
+" Fuzzy Finder and ripgrep.
 nnoremap <silent> <C-p> :Files<CR>
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:true } }
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <C-g> :Rg<CR>
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6, 'relative': v:false } }
 " let g:fzf_layout = { 'down': '50%' }
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -161,3 +170,13 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+
+" Get highligh groups of word under cursor
+" nmap <leader>sp :call <SID>SynStack()<CR>
+" function! <SID>SynStack()
+"   if !exists("*synstack")
+"     return
+"   endif
+"   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+" endfunc

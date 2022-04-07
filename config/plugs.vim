@@ -7,19 +7,19 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 "--------------------------------------------------------------------------UTILS
-Plug 'junegunn/fzf', { 'do' : { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'voldikss/vim-floaterm'
 "-----------------------------------------------------------------------------UI
-Plug 'hoob3rt/lualine.nvim'
 Plug 'junegunn/vim-emoji'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 " Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'psliwka/vim-smoothie'
+Plug 'hoob3rt/lualine.nvim'
 "------------------------------------------------------------------------EDITING
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
@@ -44,10 +44,9 @@ Plug 'ellisonleao/gruvbox.nvim'
 Plug 'ishan9299/nvim-solarized-lua'
 Plug 'olimorris/onedarkpro.nvim'
 Plug 'mhartington/oceanic-next'
-Plug 'thatGuyAnes/Belmonts'
 Plug 'Mofiqul/dracula.nvim'
 
-
+Plug 'gruvbox-community/gruvbox'
 Plug 'shaunsingh/solarized.nvim'
 Plug 'lifepillar/vim-solarized8'
 
