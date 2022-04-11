@@ -8,8 +8,8 @@
 lua << EOF
 -- customize dracula color palette
 vim.g.dracula_colors = {
-  -- bg = "#282A36",
-  bg = "#000000",
+  bg = "#282A36",
+  -- bg = "#000000",
   fg = "#F8F8F2",
   selection = "#44475A",
   comment = "#6272A4",

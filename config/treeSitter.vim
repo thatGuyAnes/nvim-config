@@ -1,4 +1,4 @@
-lua <<EOF
+lua << EOF
 require'nvim-treesitter.configs'.setup {
   context_commentstring = {
       enable = true,
@@ -6,15 +6,14 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
       enable = true,
       additional_vim_regex_highlighting = false,
-      disable = {"html"},
-      use_languagetree = true,
   },
   indent = {
-    enable = true,
+    enable = false,
     disable = {},
   },
   ensure_installed = {
       "javascript",
+      "typescript",
       "jsdoc",
       "css",
       "graphql",
@@ -35,10 +34,15 @@ require'nvim-treesitter.configs'.setup {
   },
   rainbow = {
     enable = true,
-    extand_mode = true,
+    disable = { "html" },
+    extand_mode = false,
+    max_file_lines = nil,
+  },
+textobjects = {
+  enable = true
   }
 }
 
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx", "javascriptreact" }
+-- local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+-- parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx", "javascriptreact" }
 EOF

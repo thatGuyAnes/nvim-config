@@ -2,8 +2,8 @@ lua << EOF
 -- The theme comes with six filters, default, machine, ristretto, octogon spectrum, and classic
 -- default: --default--
 
--- vim.g.monokaipro_filter = "octogon"
- vim.g.monokaipro_filter = "spectrum"
+vim.g.monokaipro_filter = "octogon"
+-- vim.g.monokaipro_filter = "spectrum"
 -- vim.g.monokaipro_filter = "machine"
 -- vim.g.monokaipro_filter = "ristretto"
 
@@ -58,6 +58,7 @@ vim.g.monokaipro_colors = {
   hint = "cyan",
   -- TSPunctBracket = "red",
   -- bg = "#403e41"
-  bg = "#000000"
+  -- bg = "#2B292C"
+  bg = "#1F1E20"
   }
 EOF

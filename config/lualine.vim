@@ -1,9 +1,8 @@
 lua << EOF
-require('lualine').setup({
+require'lualine'.setup{
   options = {
     icons_enabled = true,
-    padding = 1,
-    theme = 'dracula',
+    theme = 'gruvbox',
     section_separators = '',
     component_separators = '',
     disabled_filetypes = {},
@@ -72,5 +71,5 @@ require('lualine').setup({
   },
   tabline = {},
   extensions = {'nvim-tree'},
-})
+}
 EOF

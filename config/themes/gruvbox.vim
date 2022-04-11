@@ -3,9 +3,8 @@
 " let g:gruvbox_transparent_bg = 1
 " let g:gruvbox_italicize_comments = 1
 
-
 lua << EOF
-vim.g.gruvbox_bold                  = true
+vim.g.gruvbox_bold                  = bold
 vim.g.gruvbox_italic                = true
 vim.g.gruvbox_transparent_bg        = 0
 vim.g.gruvbox_underline             = true
