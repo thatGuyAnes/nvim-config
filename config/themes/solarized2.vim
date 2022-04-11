@@ -8,7 +8,6 @@ lua << EOF
   vim.g.solarized_contrast = true
   vim.g.solarized_borders = true
   vim.g.solarized_disable_background = false
-
   require('solarized').set()
 
 EOF

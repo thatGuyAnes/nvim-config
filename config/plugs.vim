@@ -16,7 +16,6 @@ Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/vim-emoji'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
-" Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'psliwka/vim-smoothie'
 Plug 'hoob3rt/lualine.nvim'
@@ -30,8 +29,9 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'editorconfig/editorconfig-vim'
 "-------------------------------------------------------------------------SYNTAX
 Plug 'mboughaba/i3config.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'pangloss/vim-javascript'
+" Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'sheerun/vim-polyglot'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "------------------------------------------------------------------MISCELLANEOUS
 " -----------------------------------------------------------------COLOR SCHEMES
@@ -39,16 +39,18 @@ Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'https://gitlab.com/__tpb/monokai-pro.nvim'
 Plug 'tanvirtin/monokai.nvim'
-Plug 'rktjmp/lush.nvim'
-Plug 'ellisonleao/gruvbox.nvim'
 Plug 'ishan9299/nvim-solarized-lua'
 Plug 'olimorris/onedarkpro.nvim'
-Plug 'mhartington/oceanic-next'
 Plug 'Mofiqul/dracula.nvim'
 
-Plug 'gruvbox-community/gruvbox'
-Plug 'shaunsingh/solarized.nvim'
+" Plug 'gruvbox-community/gruvbox'
+Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
+
+Plug 'ellisonleao/gruvbox.nvim'
+" Plug 'rafamadriz/gruvbox'
+
 Plug 'lifepillar/vim-solarized8'
+
 
 
 call plug#end()

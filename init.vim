@@ -29,6 +29,7 @@ lua << EOF
 --   )
 -- vim.cmd("autocmd Filetype " .. ft_str .. " setlocal foldmethod=expr foldexpr=nvim_treesitter#foldexpr()")
 require 'colorizer'.setup()
+
 require('nvim_comment').setup({
   -- Linters prefer comment and line to have a space in between markers
   marker_padding = true,

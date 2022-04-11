@@ -29,12 +29,12 @@ set showmode                          " Remove mode information (unnecessary bec
 set nowrap                              " Disables line wrapping.
 set nu                                  " Enables line numbers.
 set relativenumber                      " Line numbers relative to the current line.
-set scrolloff=2                        " Always show x number of lines when scrolling.
+set scrolloff=10                        " Always show x number of lines when scrolling.
 " set scroll=5                            " Number of lines to scroll by.
 " set sidescroll=999                        " Number of columns to scroll horizontaly offscreen.
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set showtabline=0                       " Show tabs (default 0:never, 1: more than one window, 2:always)
-set sidescrolloff=999
+set sidescrolloff=20
 set signcolumn=yes                      " Enables sign colomn.
 set smartcase                           " Enables case sensitivity when using uppercases.
 set smartindent                         " Shrewder and better auto indentation.
@@ -52,7 +52,7 @@ endif
 " set guicursor=i:block                  " Set cursor to block.
 " Blinking cursor in insert mode + horizontal cursor in visual and replace mode.
 " set guicursor=i-c:block-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor50
-set guicursor=i-c:ver50-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor50
+" set guicursor=i-c:ver50-iCursor-blinkwait300-blinkon200-blinkoff150,v-r-cr:hor50
 
 " Treat <li> and <p> tags like the block tags they are.
 let g:html_indent_tags = 'li\|p'
@@ -63,7 +63,7 @@ autocmd Filetype html setlocal tabstop=4 shiftwidth=4 softtabstop=2 expandtab
 " Turn on spell check for markdown files.
 autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
-" spelllan=en_us
+set spelllang=en_us
 
 " Emoji in markdown using vim-emoji plugin:
 " Completion with Ctrl-x Ctrl-u (i.e: :smi<ctrl-x><ctrl-u>)
@@ -81,10 +81,10 @@ let g:vimwiki_global_ext = 0
 
 
 " setting the filetype as jsx for files that end in .js
-augroup filetype_jsx
-    autocmd!
-    autocmd FileType javascript set filetype=javascriptreact
-augroup END
+" augroup filetype_jsx
+"     autocmd!
+"     autocmd FileType javascript set filetype=javascriptreact
+" augroup END
 
 
 " autocmd Filetype NvimTree setlocal tabstop=1 shiftwidth=1 softtabstop=1 expandtab
