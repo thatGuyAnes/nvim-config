@@ -10,7 +10,7 @@ let g:solarized_visibility = 'high'
 let g:solarized_diffmode = 'high'
 
 " make terminal background transparent if set to 1 (default: 0).
-let g:solarized_termtrans = 0
+let g:solarized_termtrans = 1
 
 " `normal` (default), `low` or `flat`;
 let g:solarized_statusline = 'normal'
