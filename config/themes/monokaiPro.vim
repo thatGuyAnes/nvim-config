@@ -1,5 +1,6 @@
 lua << EOF
--- The theme comes with six filters, default, machine, ristretto, octogon spectrum, and classic
+-- The theme comes with six filters, default, machine, ristretto, octogon
+-- spectrum, and classic
 -- default: --default--
 
 vim.g.monokaipro_filter = "octogon"
@@ -13,11 +14,11 @@ vim.g.monokaipro_terminal_colors = true
 
 -- Make comments italic
 -- default: true
-vim.g.monokaipro_italic_comments = false
+vim.g.monokaipro_italic_comments = true
 
 -- Make keywords italic
 -- true
-vim.g.monokaipro_italic_keywords = true
+vim.g.monokaipro_italic_keywords = false
 
 -- Make functions italic
 -- false
@@ -29,14 +30,15 @@ vim.g.monokaipro_italic_variables = false
 
 -- Enable this to disable setting the background color
 -- false
-vim.g.monokaipro_transparent = false
+vim.g.monokaipro_transparent = true
 
 -- Enabling this option, will hide inactive statuslines and replace them with a
 -- thin border instead. Should work with the standard StatusLine and LuaLine.
 -- false
 vim.g.monokaipro_hide_inactive_statusline = false
 
--- Set a darker background on sidebar-like windows. For example: [--vista_kind--, --packer--]
+-- Set a darker background on sidebar-like windows. For example:
+-- [--vista_kind--, --packer--]
 -- {}
 vim.g.monokaipro_sidebars = {}
 
@@ -59,6 +61,6 @@ vim.g.monokaipro_colors = {
   -- TSPunctBracket = "red",
   -- bg = "#403e41"
   -- bg = "#2B292C"
-  bg = "#1F1E20"
+--  bg = "#1F1E20"
   }
 EOF

@@ -5,7 +5,7 @@
   "diagnostic.infoSign": "",
   "eslint.run": "onType",
   "eslint.packageManager": "npm",
-  "eslint.autoFixOnSave": false,
+  "eslint.autoFixOnSave": true,
   "eslint.probe": [
     "javascript",
     "javascriptreact",
@@ -62,7 +62,7 @@
   "prettier.singleQuote": true,
   "prettier.htmlWhitespaceSensitivity": "ignore",
   "prettier.bracketSpacing": true,
-  "prettier.jsxBracketSameLine": true,
+  // "prettier.jsxBracketSameLine": true,
   "prettier.vueIndentScriptAndStyle": true,
   "prettier.tabWidth": 2
 }

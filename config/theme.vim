@@ -6,7 +6,7 @@ source $HOME/.config/nvim/config/themes/gruvbox.vim
 " source $HOME/.config/nvim/config/themes/gruvbox_community.vim
 " source $HOME/.config/nvim/config/themes/solarized.vim
 " source $HOME/.config/nvim/config/themes/solarized2.vim
-" source $HOME/.config/nvim/config/themes/solarized8.vim
+source $HOME/.config/nvim/config/themes/solarized8.vim
 source $HOME/.config/nvim/config/themes/dracula.vim
 " source $HOME/.config/nvim/config/themes/material.vim
 " source $HOME/.config/nvim/config/themes/palenight.vim
@@ -36,18 +36,18 @@ syntax enable
 set background=dark
 
 " source $HOME/.config/nvim/config/themes/gruvbox-baby.vim
-colorscheme gruvbox
+" colorscheme gruvbox
 " let g:doom_one_terminal_colors = v:true
 " colorscheme doom-one
 
-" colorscheme monokaipro
+colorscheme monokaipro
 " colorscheme palenight
 
 " colorscheme OceanicNext
 " colorscheme dracula
 " colorscheme sonokai
 " colorscheme monokai
-" colorscheme solarized8
+" colorscheme solarized8_high
 
 " set background=light
 " colorscheme solarized
