@@ -40,14 +40,14 @@ set background=dark
 " let g:doom_one_terminal_colors = v:true
 " colorscheme doom-one
 
-" colorscheme monokaipro
+colorscheme monokaipro
 " colorscheme palenight
 
 " colorscheme OceanicNext
 " colorscheme dracula
 " colorscheme sonokai
 " colorscheme monokai
-colorscheme solarized8_high
+" colorscheme solarized8_high
 
 " set background=light
 " colorscheme solarized

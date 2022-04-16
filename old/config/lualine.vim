@@ -2,7 +2,7 @@ lua << EOF
 require'lualine'.setup{
   options = {
     icons_enabled = true,
-    theme = 'gruvbox',
+    theme = 'dracula',
     section_separators = '',
     component_separators = '',
     disabled_filetypes = {},
@@ -10,7 +10,7 @@ require'lualine'.setup{
     globalstatus = false,
   },
   sections = {
-    lualine_a = {'branch'},
+    lualine_a = {},
     lualine_b = {
       {
         'diff',
@@ -35,8 +35,8 @@ require'lualine'.setup{
         path = 1, -- 0 = just filename, 1 = relative path, 2 = absolute path
         shorting_target = 40,    -- Shortens path to leave 40 spaces in the window
         symbols = {
-          modified = '[+]',      -- Text to show when the file is modified.
-          readonly = '[-]',      -- Text to show when the file is non-modifiable or readonly.
+          modified = ' 💾',      -- Text to show when the file is modified.
+          readonly = ' ⛔',      -- Text to show when the file is non-modifiable or readonly.
           unnamed = '[No Name]', -- Text to show for unnamed buffers.
         },
       },
@@ -44,14 +44,14 @@ require'lualine'.setup{
     lualine_x = {
       {
         'buffers',
-        show_filename_only = true, -- shows shortened relative path when false
+        show_filename_only = false, -- shows shortened relative path when false
         show_modified_status = true, -- shows indicator then buffer is modified
         mode = 1, -- 0 shows buffer name
         max_length = vim.o.columns * 2 / 3, -- maximum width of buffers component
         buffers_color = {
           -- Same values like general color option can be used here.
-          active = 'lualine_{section}_normal', -- color for active buffer
-          inactive = 'lualine_{section}_inactive', -- color for inactive buffer
+          active = {fg='black', bg='#5AF78E'}, -- color for active buffer
+          inactive = {fg='gray'}, -- color for inactive buffer
         },
       },
     },
@@ -59,7 +59,7 @@ require'lualine'.setup{
       'location',
       'progress',
     },
-    lualine_z = {'mode'},
+    lualine_z = {},
   },
   inactive_sections = {
     lualine_a = {},

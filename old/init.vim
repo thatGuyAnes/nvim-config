@@ -8,7 +8,7 @@ source $HOME/.config/nvim/config/nvim-tree.vim                " nvimTree config
 source $HOME/.config/nvim/config/lualine.vim                  " Status Line
 source $HOME/.config/nvim/config/floaterm.vim                 " floaterm
 
-set foldmethod=expr
+" set foldmethod=expr
 set foldmarker={,}
 set foldexpr=nvim_treesitter#foldexpr()
 

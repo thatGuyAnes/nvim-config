@@ -26,11 +26,11 @@ vim.g.monokaipro_italic_functions = false
 
 -- Make variables and identifiers italic
 -- false
-vim.g.monokaipro_italic_variables = true
+vim.g.monokaipro_italic_variables = false
 
 -- Enable this to disable setting the background color
 -- false
-vim.g.monokaipro_transparent = false
+vim.g.monokaipro_transparent = true
 
 -- Enabling this option, will hide inactive statuslines and replace them with a
 -- thin border instead. Should work with the standard StatusLine and LuaLine.
