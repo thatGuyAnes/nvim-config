@@ -2,7 +2,7 @@ local fn = vim.fn
 
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then 
+if fn.empty(fn.glob(install_path)) > 0 then
 	PACKER_BOOTSTRAP = fn.system {
 		"git",
 		"clone",
@@ -75,8 +75,8 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
-  -- use "p00f/nvim-ts-rainbow"
-  -- use "nvim-treesitter/playground"
+  use "p00f/nvim-ts-rainbow"
+  use "nvim-treesitter/playground"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
