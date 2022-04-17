@@ -19,7 +19,7 @@ M.setup = function()
    -- virtual_text = true,
     virtual_text = {
       spacing = 4,
-      prefix = ''
+      prefix = ' '
     },
     -- show signs
     signs = {

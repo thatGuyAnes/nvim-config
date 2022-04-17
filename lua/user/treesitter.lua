@@ -36,6 +36,9 @@ configs.setup {
     extand_mode = false,
     max_file_lines = nil,
   },
+  context_commentstring = {
+      enable = true,
+  },
   playground = {
     enable = true,
   }
