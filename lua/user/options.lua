@@ -1,5 +1,5 @@
 local options = {
-  -- termguicolors = true,
+  termguicolors   = true,
   autoindent      = true,
   backup          = false,                          
   clipboard       = "unnamedplus",               
