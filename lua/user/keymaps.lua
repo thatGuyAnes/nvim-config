@@ -102,7 +102,10 @@ keymap("n", "<leader>+", ":vertical resize +5<CR>", opts)
 keymap("n", "<leader>time", '"=strftime("%F")<CR>p9h', opts)
 keymap("n", "<leader>date", '"=strftime("%X")<CR>p7h', opts)
 
--- Fuzzy Finder
+-- Fuzzy Finder Telescope
+-- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>", opts)
+keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Run in Node:
 keymap("n", "<leader>rnd", ":!node %<CR>", opts)
