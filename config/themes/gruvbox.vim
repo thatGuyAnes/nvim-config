@@ -1,6 +1,7 @@
 " Full config at:
 " https://github.com/morhetz/gruvbox/wiki/Configuration
 " let g:gruvbox_transparent_bg = 1
+
 " let g:gruvbox_italicize_comments = 1
 
 lua << EOF
