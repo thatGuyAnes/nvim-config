@@ -18,6 +18,7 @@ vim.g.mapleader = " "
 
 -- keymap("c", "<Enter>", "<Esc>:noh<CR>", opts)
 
+--------------------------------------------------------------------- NAVIGATION
 -- Splits Navigation
 keymap("n", "<leader>j", ":wincmd j<CR>", opts)
 keymap("n", "<leader>h", ":wincmd h<CR>", opts)
@@ -35,6 +36,9 @@ keymap("n", "<C-j>", "5j", {})
 keymap("n", "j", "gj", opts)
 keymap("n", "k", "gk", opts)
 
+-- Buffers navigation
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Smooth Scrolling
 
 -- Close the current buffer and move to the prev one:
@@ -46,6 +50,10 @@ keymap("n", "<leader>bd", ":<C-u>up <bar> %bd <bar> e#<CR>", opts)
 keymap("n", "<leader>bl", ":ls<CR>", opts)
 
 -- NVIMTree
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
+-- keymap("n", "<leader>E", "")
+
 
 ------------------------------------------------------------------------EDITING
 
@@ -127,14 +135,10 @@ keymap("n", "<leader>rnd", ":!node %<CR>", opts)
 -- keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 -- keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
--- keymap("n", "<S-l>", ":bnext<CR>", opts)
--- keymap("n", "<S-h>", ":bprevious<CR>", opts)
-
 -- Move text up and down
 -- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 -- keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
--- 
+
 -- Insert --
 -- Press jk fast to enter
 -- keymap("i", "jk", "<ESC>", opts)
