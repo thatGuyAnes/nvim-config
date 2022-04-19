@@ -80,13 +80,29 @@ return packer.startup(function(use)
   use "p00f/nvim-ts-rainbow"
   use 'JoosepAlviste/nvim-ts-context-commentstring'
 
--- NvimTree
-use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    }
-}
+  -- NvimTree
+  use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      }
+  }
+
+  -- lualine
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- Colorizer
+  use 'norcalli/nvim-colorizer.lua'
+
+  --Surround
+  use 'tpope/vim-surround'
+
+  -- ToggleTerm
+  use {"akinsho/toggleterm.nvim"}
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

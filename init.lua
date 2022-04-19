@@ -1,3 +1,7 @@
+-- TODO:
+  -- add karb94/neoscroll.nvim,
+  -- DONE: change surround to vimsurround, or configure accordinly
+  -- install toggleterm
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
@@ -9,3 +13,6 @@ require "user.treesitter"
 require "user.autopairs"
 require "user.comment"
 require "user.nvim-tree"
+require "user.lualine"
+require "user.colorizer"
+require "user.toggleterm"

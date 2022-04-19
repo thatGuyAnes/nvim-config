@@ -2,11 +2,7 @@ local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
 
-local keymap = vim.api.nvim_set_keymap
-
-keymap("", "<Space>", "<Nop>", {noremap = true, silent = true})
-vim.g.mapleader = " "
-
+local k = vim.api.nvim_set_keymap
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -18,105 +14,117 @@ vim.g.mapleader = " "
 
 -- keymap("c", "<Enter>", "<Esc>:noh<CR>", opts)
 
+------------------------------------------------------------------------- LEADER
+k("", "<Space>", "<Nop>", {noremap = true, silent = true})
+vim.g.mapleader = " "
+
 --------------------------------------------------------------------- NAVIGATION
 -- Splits Navigation
-keymap("n", "<leader>j", ":wincmd j<CR>", opts)
-keymap("n", "<leader>h", ":wincmd h<CR>", opts)
-keymap("n", "<leader>k", ":wincmd k<CR>", opts)
-keymap("n", "<leader>l", ":wincmd l<CR>", opts)
+k("n", "<leader>j", ":wincmd j<CR>", opts)
+k("n", "<leader>h", ":wincmd h<CR>", opts)
+k("n", "<leader>k", ":wincmd k<CR>", opts)
+k("n", "<leader>l", ":wincmd l<CR>", opts)
 
 -- Horizontal Scrolling.
-keymap("n", "<C-l>", "10l", {})
-keymap("n", "<C-h>", "10h", {})
+k("n", "<C-l>", "10l", opts)
+k("n", "<C-h>", "10h", opts)
 
+k("v", "<C-l>", "10l", opts)
+k("v", "<C-h>", "10h", opts)
 -- Vertical Scrolling.
-keymap("n", "<C-k>", "5k", {})
-keymap("n", "<C-j>", "5j", {})
+k("n", "<C-k>", "5k", opts)
+k("n", "<C-j>", "5j", opts)
 
-keymap("n", "j", "gj", opts)
-keymap("n", "k", "gk", opts)
+k("v", "<C-k>", "5k", opts)
+k("v", "<C-j>", "5j", opts)
+
+k("n", "j", "gj", opts)
+k("n", "k", "gk", opts)
 
 -- Buffers navigation
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+k("n", "<S-l>", ":bnext<CR>", opts)
+k("n", "<S-h>", ":bprevious<CR>", opts)
 -- Smooth Scrolling
 
 -- Close the current buffer and move to the prev one:
 -- this replicates the functionality of closing a tab
-keymap("n", "<leader>bc", ":<C-u>bp <bar> bd #<CR>", opts)
+k("n", "<leader>bc", ":<C-u>bp <bar> bd #<CR>", opts)
 -- Close all buffers except current one:
-keymap("n", "<leader>bd", ":<C-u>up <bar> %bd <bar> e#<CR>", opts)
+k("n", "<leader>bd", ":<C-u>up <bar> %bd <bar> e#<CR>", opts)
 -- List all open buffers and their status:
-keymap("n", "<leader>bl", ":ls<CR>", opts)
+k("n", "<leader>bl", ":ls<CR>", opts)
 
 -- NVIMTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
+k("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+k("n", "<leader>r", ":NvimTreeRefresh<CR>", opts)
 -- keymap("n", "<leader>E", "")
 
 
 ------------------------------------------------------------------------EDITING
 
--- Better escape or f**** use `ctrl-[` !!!
-keymap("i", "jj", "<Esc>", opts)
-keymap("i", "JJ", "<Esc>", opts)
+-- TODO: remove this binding, and use ctrl+[ to escape instead !!
+k("i", "jj", "<Esc>", opts)
+k("i", "JJ", "<Esc>", opts)
 
 
 -- Move current line up/down
-keymap("n", "<A-[>", ":m-2<CR>==", opts)
-keymap("n", "<A-]>", ":m+<CR>==", opts)
+k("n", "<A-[>", ":m-2<CR>==", opts)
+k("n", "<A-]>", ":m+<CR>==", opts)
 
-keymap("v", "<A-[>", ":m'<-2<CR>gv=gv", opts)
-keymap("v", "<A-]>", ":m'>+<CR>gv=gv", opts)
+k("v", "<A-[>", ":m'<-2<CR>gv=gv", opts)
+k("v", "<A-]>", ":m'>+<CR>gv=gv", opts)
 
-keymap("i", "<A-[>", "<Esc>:m-2<CR>==gi", opts)
-keymap("i", "<A-]>", "<Esc>:m+<CR>==gi", opts)
+k("i", "<A-[>", "<Esc>:m-2<CR>==gi", opts)
+k("i", "<A-]>", "<Esc>:m+<CR>==gi", opts)
 
 
 -- If you use Vim in a terminal, pressing alt will send an escape character
 -- followed by the normal_mode_key that you pressed, removing the need to press
 -- escape yourself.
 -- For Tmux ; New lines without going to insert mode
-keymap("n", "<A-O>", "O<Esc>", opts)
-keymap("n", "<A-o>", "o<Esc>", opts)
+k("n", "<A-O>", "O<Esc>", opts)
+k("n", "<A-o>", "o<Esc>", opts)
 
-keymap("n", "vw", "viw", opts)
-keymap("n", "cw", "ciw", opts)
-keymap("n", "dw", "diw", opts)
-keymap("n", "V", "v$", opts)
-keymap("n", "vv", "V", opts)
+k("n", "vw", "viw", opts)
+k("n", "cw", "ciw", opts)
+k("n", "dw", "diw", opts)
+k("n", "V", "v$", opts)
+k("n", "vv", "V", opts)
 
 -- Tabbing indentation
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+k("v", "<", "<gv", opts)
+k("v", ">", ">gv", opts)
+
+-- Hold on to the yanked text
+k("v", "p", '"_dP', opts)
 
 -- Commentary
 -- Git
 
 -- Forward delete in insert mode, alternative to 'ctrl-o + x' or pressing the
 -- del key. There is also the 'shift-c' to delete to the end of line.
-keymap("i", "<C-d>", "<Del>", opts)
+k("i", "<C-d>", "<Del>", opts)
 
 --------------------------------------------------------------------------LAYOUT
 
 -- Full width & full height splits
-keymap("n", "<leader>fh", ":wincmd _<CR>", opts)
-keymap("n", "<leader>fw", ":wincmd |<CR>", opts)
+k("n", "<leader>fh", ":wincmd _<CR>", opts)
+k("n", "<leader>fw", ":wincmd |<CR>", opts)
 
 -- Vertical resize
-keymap("n", "<leader>-", ":vertical resize -5<CR>", opts)
-keymap("n", "<leader>+", ":vertical resize +5<CR>", opts)
+k("n", "<leader>-", ":vertical resize -5<CR>", opts)
+k("n", "<leader>+", ":vertical resize +5<CR>", opts)
 
-keymap("n", "<leader>time", '"=strftime("%F")<CR>p9h', opts)
-keymap("n", "<leader>date", '"=strftime("%X")<CR>p7h', opts)
+k("n", "<leader>time", '"=strftime("%F")<CR>p9h', opts)
+k("n", "<leader>date", '"=strftime("%X")<CR>p7h', opts)
 
 -- Fuzzy Finder Telescope
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+k("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>", opts)
+k("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Run in Node:
-keymap("n", "<leader>rnd", ":!node %<CR>", opts)
+k("n", "<leader>rnd", ":!node %<CR>", opts)
 
 
 --------------------------------------------------------------------------------
