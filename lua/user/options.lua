@@ -45,10 +45,6 @@ local options = {
 }
 
 vim.opt.shortmess:append "c" -- Dont's pass messages to |ins-completion-menu
-
---- vim.opt.noh = true
--- nohlsearch      = true,
--- vim.o.nohlsearch = true
 vim.wo.wrap = true
 vim.wo.colorcolumn     = '81'
 
@@ -63,7 +59,7 @@ end
 
 -- set formatoptions -= rco, stops having comments on new line.
 vim.api.nvim_command([[
-au BufEnter * set fo-=co fo-=r fo-=o
+au! BufEnter * set fo-=co fo-=r fo-=o
 ]])
 
 -- nohilights, highlights all matches while searching
