@@ -50,6 +50,9 @@ return packer.startup(function(use)
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use 'https://gitlab.com/__tpb/monokai-pro.nvim'
+  use 'Mofiqul/dracula.nvim'
+  -- use 'gruvbox-community/gruvbox'
+  use { "ellisonleao/gruvbox.nvim" }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -66,6 +69,7 @@ return packer.startup(function(use)
  -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -78,6 +82,29 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+  -- NvimTree
+  use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      }
+  }
+
+  -- lualine
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- Colorizer
+  use 'norcalli/nvim-colorizer.lua'
+
+  --Surround
+  use 'tpope/vim-surround'
+
+  -- ToggleTerm
+  use {"akinsho/toggleterm.nvim"}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

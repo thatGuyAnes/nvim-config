@@ -1,7 +1,6 @@
 -- anything under M will be exported
 local M = {}
 
--- TODO: backfill this to template
 M.setup = function()
   local signs = {
     { name = "DiagnosticSignError", text = "✘" },
@@ -19,7 +18,7 @@ M.setup = function()
    -- virtual_text = true,
     virtual_text = {
       spacing = 4,
-      prefix = ' '
+      prefix = '   '
     },
     -- show signs
     signs = {
@@ -50,20 +49,34 @@ M.setup = function()
 end
 
 -- Highlight word instances under cursor
+-- MAKE SURE THAT THE COLORSCHEME SUPPORTS THESE HIGHLIGHT GROUPS !!!
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
-  if client.resolved_capabilities.document_highlight then
-    vim.api.nvim_exec(
-      [[
-      augroup lsp_document_highlight
-        autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-      augroup END
-    ]],
-      false
-    )
-  end
+  -- if client.resolved_capabilities.document_highlight then
+  --   vim.api.nvim_exec(
+  --     [[
+  --     augroup lsp_document_highlight
+  --       autocmd! * <buffer>
+  --       autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+  --       autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+  --     augroup END
+  --   ]],
+  --     false
+  --   )
+  -- end
+
+if client.resolved_capabilities.document_highlight then
+    vim.api.nvim_exec([[
+        hi LspReferenceRead cterm=bold ctermbg=red guibg=#403e41
+        hi LspReferenceText cterm=bold ctermbg=red guibg=#403e41
+        hi LspReferenceWrite cterm=bold ctermbg=red guibg=#403e41
+    ]], false)
+    vim.api.nvim_command 'autocmd CursorHold  <buffer> lua vim.lsp.buf.document_highlight()'
+    vim.api.nvim_command 'autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()'
+    vim.api.nvim_command 'autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()'
+end
+
+
 end
 
 -- Mappings
@@ -73,8 +86,8 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-  -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+  -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
