@@ -1,7 +1,9 @@
 require "user.colorschemes.monokaipro"
 require "user.colorschemes.dracula"
 require "user.colorschemes.ellisonGruvbox"
+require "user.colorschemes.solarized"
 
+-- TODO: figure this out in this setup. Not sure if it's needed though.
 -- Get the right colors when running Vim inside tmux: see `:h xterm-true-color`
 -- vim.cmd [[
 -- if exists('+termguicolors')
@@ -10,21 +12,19 @@ require "user.colorschemes.ellisonGruvbox"
 --   endif
 -- ]]
 
-
 vim.cmd [[
 try
   colorscheme monokaipro
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
-  set background=dark
+  set background=light
 endtry
 ]]
 
--- local bg = dark
--- vim.cmd [[hi Normal guibg=none]]
+-- Custom highlights:
 vim.cmd [[
-hi Normal       guibg=none
+" hi Normal       guibg=none
 hi CursorLineNr guifg=#5eacd3   ctermfg=none
-hi CursorLine   guibg=#151313      ctermbg=none
+" hi CursorLine   guibg=#151313      ctermbg=none
 ]]
 

@@ -2,11 +2,12 @@ require'lualine'.setup{
   options = {
     icons_enabled = true,
     theme = 'dracula',
-    section_separators = '',
+    -- section_separators = '',
     component_separators = '',
     disabled_filetypes = {},
     always_divide_middle = true,
     globalstatus = false,
+    section_separators = { left = '', right = '' },
   },
   sections = {
     lualine_a = {},
@@ -14,6 +15,8 @@ require'lualine'.setup{
       {
         'diff',
         colored = true,
+        separator = { left = '', right = ''  },
+        right_padding = 2 ,
         diff_color = {
           added = 'DiffAdd',
           modified = 'DiffChange',
@@ -41,22 +44,29 @@ require'lualine'.setup{
       },
     },
     lualine_x = {
+      'branch',
       {
-        'buffers',
-        show_filename_only = false, -- shows shortened relative path when false
-        show_modified_status = true, -- shows indicator then buffer is modified
-        mode = 1, -- 0 shows buffer name
-        max_length = vim.o.columns * 2 / 3, -- maximum width of buffers component
-        buffers_color = {
+        -- 'buffers',
+        -- separator = { left = '', right = ''  },
+        -- left_padding = 2 ,
+        -- show_filename_only = false, -- shows shortened relative path when false
+        -- show_modified_status = true, -- shows indicator then buffer is modified
+        -- mode = 1, -- 0 shows buffer name
+        -- max_length = vim.o.columns * 2 / 3, -- maximum width of buffers component
+        -- buffers_color = {
           -- Same values like general color option can be used here.
-          active = {fg='black', bg='#5AF78E'}, -- color for active buffer
-          inactive = {fg='gray'}, -- color for inactive buffer
-        },
+          -- active = {fg='black', bg='#5AF78E'}, -- color for active buffer
+          -- inactive = {fg='gray'}, -- color for inactive buffer
+        -- },
       },
     },
     lualine_y = {
-      'location',
-      'progress',
+      {
+        'location',
+        'progress',
+        right_padding = 2,
+        separator = { left = '', right = ''  },
+      },
     },
     lualine_z = {},
   },

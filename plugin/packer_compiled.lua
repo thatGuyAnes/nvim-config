@@ -159,10 +159,20 @@ _G.packer_plugins = {
     path = "/home/anes/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
     url = "https://github.com/williamboman/nvim-lsp-installer"
   },
+  ["nvim-lsp-ts-utils"] = {
+    loaded = true,
+    path = "/home/anes/.local/share/nvim/site/pack/packer/start/nvim-lsp-ts-utils",
+    url = "https://github.com/jose-elias-alvarez/nvim-lsp-ts-utils"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/anes/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-solarized-lua"] = {
+    loaded = true,
+    path = "/home/anes/.local/share/nvim/site/pack/packer/start/nvim-solarized-lua",
+    url = "https://github.com/ishan9299/nvim-solarized-lua"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -173,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anes/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/anes/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
@@ -223,6 +238,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anes/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/home/anes/.local/share/nvim/site/pack/packer/start/vimwiki",
+    url = "https://github.com/vimwiki/vimwiki"
   }
 }
 

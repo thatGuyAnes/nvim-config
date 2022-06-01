@@ -45,13 +45,15 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "windwp/nvim-ts-autotag" -- auto close/rename html tags using treesitter
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
-  use 'https://gitlab.com/__tpb/monokai-pro.nvim'
-  use 'Mofiqul/dracula.nvim'
+  use "https://gitlab.com/__tpb/monokai-pro.nvim"
+  use "Mofiqul/dracula.nvim"
   -- use 'gruvbox-community/gruvbox'
+  use 'ishan9299/nvim-solarized-lua'
   use { "ellisonleao/gruvbox.nvim" }
 
   -- cmp plugins
@@ -70,10 +72,11 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "jose-elias-alvarez/nvim-lsp-ts-utils"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-  use 'nvim-telescope/telescope-media-files.nvim'
+  use "nvim-telescope/telescope-media-files.nvim"
 
   -- Treesitter
   use {
@@ -81,30 +84,34 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "p00f/nvim-ts-rainbow"
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- NvimTree
   use {
-      'kyazdani42/nvim-tree.lua',
+      "kyazdani42/nvim-tree.lua",
       requires = {
-        'kyazdani42/nvim-web-devicons', -- optional, for file icon
+        "kyazdani42/nvim-web-devicons", -- optional, for file icon
       }
   }
 
   -- lualine
   use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    "nvim-lualine/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true }
   }
 
   -- Colorizer
-  use 'norcalli/nvim-colorizer.lua'
+  use "norcalli/nvim-colorizer.lua"
 
   --Surround
-  use 'tpope/vim-surround'
+  use "tpope/vim-surround"
 
   -- ToggleTerm
   use {"akinsho/toggleterm.nvim"}
+
+
+-- VimWiki
+  use "vimwiki/vimwiki"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

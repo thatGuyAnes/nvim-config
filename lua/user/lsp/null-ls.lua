@@ -8,9 +8,40 @@ end
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
 -- local diagnostics = null_ls.builtins.diagnostics
 
-null_ls.setup {
-  debug = false,
-  sources = {
-    require("null-ls").builtins.formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }
-  },
+-- null_ls.setup {
+--   debug = false,
+--   sources = {
+--     require("null-ls").builtins.formatting.prettier.with { extra_args = {
+--       "--single-quote", "--jsx-single-quote" } }
+--   },
+-- }
+
+
+-- local null_ls = require('null-ls')
+-- local formatting = null_ls.builtins.formatting
+
+local sources = {
+  -- formatting.eslint,
+  -- formatting.prettier,
+  null_ls.builtins.diagnostics.eslint.with({
+    prefer_local = "node_modules/.bin",
+  }), -- eslint or eslint_d
+  null_ls.builtins.code_actions.eslint, -- eslint or eslint_d
+  null_ls.builtins.formatting.prettier -- prettier, eslint, eslint_d, or prettierd
 }
+
+null_ls.setup({
+  debug = false,
+  sources = sources,
+  on_attach = function(client)
+    -- if client.resolved_capabilities.document_formatting then
+    if client.server_capabilities.document_formatting then
+      vim.cmd([[
+            augroup LspFormatting
+                autocmd! * <buffer>
+                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+            augroup END
+            ]])
+    end
+  end,
+})

@@ -42,11 +42,15 @@ local options = {
   wrap            = false,
   writebackup     = false,
   foldmarker      = "{,}",
+  -- foldexpr        = nvim_treesitter#foldexpr(),
 }
 
 vim.opt.shortmess:append "c" -- Dont's pass messages to |ins-completion-menu
 vim.wo.wrap = true
 vim.wo.colorcolumn     = '81'
+
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 
 for k, v in pairs(options) do
   vim.opt[k] = v
