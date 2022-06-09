@@ -55,6 +55,7 @@ return packer.startup(function(use)
   -- use 'gruvbox-community/gruvbox'
   use 'ishan9299/nvim-solarized-lua'
   use { "ellisonleao/gruvbox.nvim" }
+  use 'olimorris/onedarkpro.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
