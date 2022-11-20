@@ -110,6 +110,7 @@ k("v", "p", '"_dP', opts)
 k("i", "<C-d>", "<Del>", opts)
 
 -- Commentary
+
 -- Git
 
 --------------------------------------------------------------------------LAYOUT
@@ -129,7 +130,6 @@ k("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 k("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 --------------------------------------------------------------------------------
-
 -- Get time and date:
 k("n", "<leader>time", '"=strftime("%F")<CR>p9h', opts)
 k("n", "<leader>date", '"=strftime("%X")<CR>p7h', opts)

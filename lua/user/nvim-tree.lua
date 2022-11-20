@@ -1,27 +1,27 @@
 -- following options are the default
-vim.g.nvim_tree_icons = {
-     default = '',
-     symlink = '',
-     git = {
-       unstaged= "✗",
-       staged = "✓",
-       unmerged = "",
-       renamed = "➜",
-       untracked = "★",
-       deleted = "",
-       ignored = "◌"
-       },
-     folder = {
-       arrow_open = "",
-       arrow_closed = "",
-       default = "",
-       open = "",
-       empty = "",
-       empty_open = "",
-       symlink = "",
-       symlink_open = "",
-       },
-     }
+--[[ vim.g.nvim_tree_icons = { ]]
+--[[      default = '', ]]
+--[[      symlink = '', ]]
+--[[      git = { ]]
+--[[        unstaged= "✗", ]]
+--[[        staged = "✓", ]]
+--[[        unmerged = "", ]]
+--[[        renamed = "➜", ]]
+--[[        untracked = "★", ]]
+--[[        deleted = "", ]]
+--[[        ignored = "◌" ]]
+--[[        }, ]]
+--[[      folder = { ]]
+--[[        arrow_open = "", ]]
+--[[        arrow_closed = "", ]]
+--[[        default = "", ]]
+--[[        open = "", ]]
+--[[        empty = "", ]]
+--[[        empty_open = "", ]]
+--[[        symlink = "", ]]
+--[[        symlink_open = "", ]]
+--[[        }, ]]
+--[[      } ]]
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 local nvim_tree = require('nvim-tree')
     nvim_tree.setup {
@@ -113,7 +113,33 @@ local nvim_tree = require('nvim-tree')
       renderer = {
         indent_markers = {
           enable = false,
+          },
+        icons = {
+          glyphs = {
+         default = '',
+         symlink = '',
+         git = {
+           unstaged= "✗",
+           staged = "✓",
+           unmerged = "",
+           renamed = "➜",
+           untracked = "★",
+           deleted = "",
+           ignored = "◌"
+           },
+         folder = {
+           arrow_open = "",
+           arrow_closed = "",
+           default = "",
+           open = "",
+           empty = "",
+           empty_open = "",
+           symlink = "",
+           symlink_open = "",
+           },
+
           }
+    }
       },
       filters = {
         dotfiles = false,
