@@ -72,9 +72,9 @@ cmp.setup {
     -- completion = {
     --   border = border,
     -- },
-    -- diagnostic = {
-    --   border = border,
-    -- },
+     diagnostic = {
+       border = border,
+     },
   },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),

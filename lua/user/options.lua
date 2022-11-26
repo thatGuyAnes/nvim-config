@@ -51,6 +51,7 @@ vim.wo.colorcolumn     = '81'
 
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.guicursor = ""
 
 for k, v in pairs(options) do
   vim.opt[k] = v

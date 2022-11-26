@@ -65,8 +65,8 @@ local nvim_tree = require('nvim-tree')
         ignore = false,
       },
       view = {
-        width = 30,
-        height = 30,
+        width = 25,
+        --[[ height = 30, ]]
         side = 'left',
         preserve_window_proportions = false,
         number = false,

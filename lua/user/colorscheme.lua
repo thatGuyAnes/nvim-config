@@ -15,7 +15,7 @@ if exists('+termguicolors')
 
 vim.cmd [[
 try
-  colorscheme monokaipro
+  colorscheme solarized
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
@@ -25,7 +25,13 @@ endtry
 -- Custom highlights:
 vim.cmd [[
 " hi Normal       guibg=none
+" hi EndOfBuffer guibg=NONE ctermbg=NONE
 hi CursorLineNr guifg=#5eacd3   ctermfg=none
-" hi CursorLine   guibg=#151313      ctermbg=none
+hi CursorLineNr guibg=NONE   ctermfg=none
+hi CursorLine   guibg=#151313      ctermbg=none
+" hi LineNr guibg=NONE
+" hi SignColumn guibg=NONE
+hi clear LineNr
+hi clear SignColumn
 ]]
 
