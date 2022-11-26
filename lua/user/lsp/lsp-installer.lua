@@ -29,8 +29,8 @@ lsp_installer.setup {
 
   local lspconfig = require("lspconfig")
 
-  --lspconfig.tsserver.setup(vim.tbl_deep_extend("force", require("user.lsp.settings.tsserver"), opts))
-  lspconfig.tsserver.setup(opts)
+  lspconfig.tsserver.setup(vim.tbl_deep_extend("force", require("user.lsp.settings.tsserver"), opts))
+  --[[ lspconfig.tsserver.setup(opts) ]]
 
   lspconfig.solargraph.setup(vim.tbl_deep_extend("force", require("user.lsp.settings.solargraph"), opts))
 

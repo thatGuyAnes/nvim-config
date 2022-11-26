@@ -1,6 +1,9 @@
 
-local lspconfig = require("lspconfig")
-lspconfig.tsserver.setup({
+--[[ local lspconfig = require("lspconfig") ]]
+
+--[[ lspconfig.tsserver.setup( ]]
+  return {
+  settings = {
   -- Needed for inlayHints. Merge this table with your settings or copy
   -- it from the source if you want to add your own init_options.
   init_options = require("nvim-lsp-ts-utils").init_options,
@@ -65,4 +68,6 @@ lspconfig.tsserver.setup({
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", ":TSLspRenameFile<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", ":TSLspImportAll<CR>", opts)
   end,
-})
+  }
+}
+--[[ ) ]]

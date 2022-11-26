@@ -15,7 +15,7 @@ if exists('+termguicolors')
 
 vim.cmd [[
 try
-  colorscheme solarized
+  colorscheme monokaipro
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
