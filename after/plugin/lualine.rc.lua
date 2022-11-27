@@ -5,18 +5,48 @@ lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'solarized_dark',
-    section_separators = { left = '', right = '' },
-    component_separators = { left = '', right = '' },
+    --section_separators = { left = '', right = '' },
+    component_separators = { left = ' ', right = ' ' },
+    section_separators = { left = ' ', right = ' ' },
+    always_divide_middle = true,
     disabled_filetypes = {}
   },
   sections = {
     lualine_a = { 'mode' },
-    lualine_b = { 'branch' },
-    lualine_c = { {
-      'filename',
-      file_status = true, -- displays file status (readonly status, modified status)
-      path = 0 -- 0 = just filename, 1 = relative path, 2 = absolute path
-    } },
+    --lualine_b = { 'branch' },
+    lualine_b = {
+      { 'branch' },
+      {
+        'diff',
+        colored = true,
+        separator = { left = '', right = '' },
+        right_padding = 0,
+        diff_color = {
+          added = 'DiffAdd',
+          modified = 'DiffChange',
+          removed = 'DiffDelete',
+        },
+        symbols = {
+          added = '+',
+          modified = '~',
+          lremoved = '-',
+        },
+        source = nil,
+      },
+    },
+    lualine_c = {
+      {
+        'filename',
+        file_status = true, -- displays file status (readonly status, modified status)
+        path = 0, -- 0 = just filename, 1 = relative path, 2 = absolute path
+        shorting_target = 40, -- Shortens path to leave 40 spaces in the window
+        symbols = {
+          modified = ' 💾', -- Text to show when the file is modified.
+          readonly = ' ⛔', -- Text to show when the file is non-modifiable or readonly.
+          unnamed = '[No Name]', -- Text to show for unnamed buffers.
+        },
+      },
+    },
     lualine_x = {
       { 'diagnostics', sources = { "nvim_diagnostic" }, symbols = { error = ' ', warn = ' ', info = ' ',
         hint = ' ' } },
@@ -39,5 +69,5 @@ lualine.setup {
     lualine_z = {}
   },
   tabline = {},
-  extensions = { 'fugitive' }
+  extensions = { 'fugitive', 'nvim-tree' }
 }
