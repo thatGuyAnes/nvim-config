@@ -1,3 +1,18 @@
+USER = vim.fn.expand('$USER')
+
+local sumneko_root_path = ""
+local sumneko_binary = ""
+
+if vim.fn.has("mac") == 1 then
+  sumneko_root_path = "/Users/" .. USER .. "/tools/lua-language-server"
+  sumneko_binary = "/Users/" .. USER .. "/tools/lua-language-server/bin/macOS/lua-language-server"
+elseif vim.fn.has("unix") == 1 then
+  sumneko_root_path = "/home/" .. USER .. "/tools/lua-language-server"
+  sumneko_binary = "/home/" .. USER .. "/tools/lua-language-server/bin/lua-language-server"
+else
+  print("Unsupported system for sumneko")
+end
+
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
 
@@ -83,6 +98,7 @@ nvim_lsp.sourcekit.setup {
 }
 
 nvim_lsp.sumneko_lua.setup {
+  cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
   capabilities = capabilities,
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
@@ -104,20 +120,20 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
-nvim_lsp.tailwindcss.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
-nvim_lsp.cssls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
-nvim_lsp.astro.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
+-- nvim_lsp.tailwindcss.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities
+-- }
+--
+-- nvim_lsp.cssls.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities
+-- }
+--
+-- nvim_lsp.astro.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities
+-- }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
