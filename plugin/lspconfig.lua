@@ -106,6 +106,14 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.solargraph.setup {
+  settings = {
+    solargraph = {
+      diagnostic = true
+    }
+  }
+}
+
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
   capabilities = capabilities,
