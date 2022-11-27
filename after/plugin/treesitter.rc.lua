@@ -24,6 +24,9 @@ ts.setup {
   autotag = {
     enable = true,
   },
+  autopairs = {
+    enable = true,
+  },
   -- rainbow = {
   --   enable = true,
   --   disable = { "html" },
