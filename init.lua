@@ -1,4 +1,4 @@
-require('user.base')
+require('user.options')
 require('user.highlights')
 require('user.maps')
 require('user.plugins')

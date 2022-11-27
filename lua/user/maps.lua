@@ -15,7 +15,7 @@ local k = vim.api.nvim_set_keymap
 -- keymap("c", "<Enter>", "<Esc>:noh<CR>", opts)
 
 ------------------------------------------------------------------------- LEADER
-k("", "<Space>", "<Nop>", {noremap = true, silent = true})
+k("", "<Space>", "<Nop>", { noremap = true, silent = true })
 vim.g.mapleader = " "
 
 --------------------------------------------------------------------- NAVIGATION
@@ -31,6 +31,7 @@ k("n", "<C-h>", "10h", opts)
 
 k("v", "<C-l>", "10l", opts)
 k("v", "<C-h>", "10h", opts)
+
 -- Vertical Scrolling.
 k("n", "<C-k>", "5k", opts)
 k("n", "<C-j>", "5j", opts)
@@ -65,7 +66,8 @@ k("n", "<leader>bl", ":Telescope buffers<CR>", opts)
 
 -- Fuzzy Finder Telescope
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-k("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>", opts)
+k("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>",
+  opts)
 k("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
 
 ------------------------------------------------------------------------EDITING

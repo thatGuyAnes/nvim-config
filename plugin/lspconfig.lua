@@ -32,7 +32,7 @@ end
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
+local on_attach = function(bufnr, client)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
   --Enable completion triggered by <c-x><c-o>
@@ -43,10 +43,24 @@ local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  --buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   --buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  --buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+
+
+  buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+  buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+  buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+  --buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+  --buf_set_keymap("i", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+  buf_set_keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+  buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+  --buf_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+  --buf_set_keymap("n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+  --buf_set_keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
+  --buf_set_keymap("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
+  buf_set_keymap("n", "gl", '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 end
 
 protocol.CompletionItemKind = {
@@ -139,7 +153,8 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
   update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
+  prefix = '   ',
+  virtual_text = { spacing = 4, },
   severity_sort = true,
 }
 )
@@ -153,10 +168,17 @@ end
 
 vim.diagnostic.config({
   virtual_text = {
-    prefix = '●'
+    spacing = 4,
+    prefix = '   ',
+    --prefix = '●'
   },
   update_in_insert = true,
   float = {
+    border = 'rounded',
+    close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+    focusable = false,
+    header = { ' Diagnostics:', 'Normal' },
+    scope = 'cursor',
     source = "always", -- Or "if_many"
   },
 })
