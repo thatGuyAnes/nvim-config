@@ -26,10 +26,6 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
-  }
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
 
@@ -67,6 +63,7 @@ packer.startup(function(use)
 
   -- Comments
   use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   --Surround
   use "tpope/vim-surround"
@@ -92,5 +89,11 @@ packer.startup(function(use)
     }
   }
 
-
+  -- COLORSCHEMES
+  use {
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
+  use "https://gitlab.com/__tpb/monokai-pro.nvim"
+  use 'romgrk/doom-one.vim'
 end)

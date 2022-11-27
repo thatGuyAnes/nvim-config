@@ -1,7 +1,7 @@
-local status, n = pcall(require, "neosolarized")
+local status, neosolarized = pcall(require, "neosolarized")
 if (not status) then return end
 
-n.setup({
+neosolarized.setup({
   comment_italics = true,
 })
 

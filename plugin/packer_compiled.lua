@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/anes/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["doom-one.vim"] = {
+    loaded = true,
+    path = "/home/anes/.local/share/nvim/site/pack/packer/start/doom-one.vim",
+    url = "https://github.com/romgrk/doom-one.vim"
+  },
   ["git.nvim"] = {
     loaded = true,
     path = "/home/anes/.local/share/nvim/site/pack/packer/start/git.nvim",
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anes/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["monokai-pro.nvim"] = {
+    loaded = true,
+    path = "/home/anes/.local/share/nvim/site/pack/packer/start/monokai-pro.nvim",
+    url = "https://gitlab.com/__tpb/monokai-pro.nvim"
   },
   ["neosolarized.nvim"] = {
     loaded = true,
@@ -193,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/anes/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
+  },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/anes/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
