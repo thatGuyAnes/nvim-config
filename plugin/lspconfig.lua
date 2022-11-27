@@ -58,8 +58,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
   --buf_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
   --buf_set_keymap("n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-  --buf_set_keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-  --buf_set_keymap("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
+  buf_set_keymap("n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
+  buf_set_keymap("n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
   buf_set_keymap("n", "gl", '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 end
 
@@ -107,6 +107,9 @@ nvim_lsp.tsserver.setup {
 }
 
 nvim_lsp.solargraph.setup {
+  cmd = { "solargraph", "stdio" },
+  filetypes = { "ruby", "eruby" },
+  on_attach = on_attach,
   settings = {
     solargraph = {
       diagnostic = true
@@ -161,8 +164,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
   update_in_insert = false,
-  prefix = '   ',
-  virtual_text = { spacing = 4, },
+  virtual_text = { spacing = 4, prefix = '   ' },
   severity_sort = true,
 }
 )
