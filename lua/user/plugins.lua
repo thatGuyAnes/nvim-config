@@ -96,4 +96,7 @@ packer.startup(function(use)
   }
   use "https://gitlab.com/__tpb/monokai-pro.nvim"
   use 'romgrk/doom-one.vim'
+  use 'marko-cerovac/material.nvim'
+  use 'mhartington/oceanic-next'
+  use 'navarasu/onedark.nvim'
 end)

@@ -1,4 +1,5 @@
-require "user.colorschemes.neosolarized"
+-- require "user.colorschemes.neosolarized"
+require "user.colorschemes.one-dark"
 
 -- TODO: figure this out in this setup. Not sure if it's needed though.
 -- Get the right colors when running Vim inside tmux: see `:h xterm-true-color`
@@ -11,7 +12,8 @@ if exists('+termguicolors')
 
 vim.cmd [[
 try
-  colorscheme neosolarized
+  " colorscheme OceanicNext
+  colorscheme onedark
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
@@ -22,12 +24,16 @@ endtry
 vim.cmd [[
 " hi Normal       guibg=none
 " hi EndOfBuffer guibg=NONE ctermbg=NONE
-
 " hi CursorLineNr guifg=#5eacd3   ctermfg=none
-hi CursorLineNr guibg=NONE   ctermfg=none
-hi CursorLine   guibg=#151313      ctermbg=none
+" hi CursorLineNr guibg=NONE   ctermfg=none
+" hi CursorLine   guibg=#051313      ctermbg=none
 " hi LineNr guibg=NONE
 " hi SignColumn guibg=NONE
-hi clear LineNr
-hi clear SignColumn
+" hi clear LineNr
+" hi clear SignColumn
+
+" hi Normal guibg=NONE ctermbg=NONE
+" hi LineNr guibg=NONE ctermbg=NONE
+" hi SignColumn guibg=NONE ctermbg=NONE
+" hi EndOfBuffer guibg=NONE ctermbg=NONE
 ]]
