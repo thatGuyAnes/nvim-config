@@ -99,4 +99,8 @@ packer.startup(function(use)
   use 'marko-cerovac/material.nvim'
   use 'mhartington/oceanic-next'
   use 'navarasu/onedark.nvim'
+  use "neanias/everforest-nvim"
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use { "phha/zenburn.nvim", }
+  -- Optional; default configuration will be used if setup isn't called.
 end)

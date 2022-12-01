@@ -65,9 +65,8 @@ k("n", "<leader>bd", ":<C-u>up <bar> %bd <bar> e#<CR>", opts)
 k("n", "<leader>bl", ":Telescope buffers<CR>", opts)
 
 -- Fuzzy Finder Telescope
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-k("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>",
-  opts)
+k("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+-- k("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>", opts)
 k("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
 
 ------------------------------------------------------------------------EDITING

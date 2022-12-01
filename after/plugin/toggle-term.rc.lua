@@ -1,6 +1,7 @@
 require("toggleterm").setup {
   -- size can be a number or function which is passed the current terminal
-  size = 20,
+  size = vim.o.columns * 0.4,
+
   open_mapping = [[<c-\>]],
   -- on_open = fun(t: Terminal), -- function to run when the terminal opens
   -- on_close = fun(t: Terminal), -- function to run when the terminal closes
@@ -29,7 +30,7 @@ require("toggleterm").setup {
   insert_mappings = true, -- whether or not the open mapping applies in insert mode
   terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
   persist_size = true,
-  direction = 'float', -- 'vertical' | 'horizontal' | 'tab' | 'float',
+  direction = 'vertical', -- 'vertical' | 'horizontal' | 'tab' | 'float',
   close_on_exit = true, -- close the terminal window when the process exits
   shell = vim.o.shell, -- change the default shell
   -- This field is only relevant if direction is set to 'float'
@@ -38,9 +39,9 @@ require("toggleterm").setup {
     -- see :h nvim_open_win for details on borders however
     -- the 'curved' border is a custom border type
     -- not natively supported but implemented in this plugin.
-    border = 'single', -- 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
-    -- width = <value>,
-    -- height = <value>,
+    border = 'curved', -- 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
+    -- width = 80,
+    -- height = 30,
     winblend = 3,
   }
 }
@@ -59,10 +60,22 @@ end
 
 local Terminal = require("toggleterm.terminal").Terminal
 
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+local lazygit = Terminal:new({
+  cmd = "lazygit",
+  hidden = true,
+  direction = "float",
+  float_opts = {
+    border = 'double', -- 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
+    -- width = 100,
+    -- height = 30,
+    winblend = 0,
+  }
+})
 function _LAZYGIT_TOGGLE()
   lazygit:toggle()
 end
+
+vim.api.nvim_set_keymap("n", "<C-g>", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", { noremap = true, silent = true })
 
 local node = Terminal:new({ cmd = "node", hidden = true })
 function _NODE_TOGGLE()

@@ -1,5 +1,9 @@
+-- require "user.colorschemes.zenburn"
 -- require "user.colorschemes.neosolarized"
-require "user.colorschemes.one-dark"
+-- require "user.colorschemes.one-dark"
+-- require "user.colorschemes.one-dark"
+-- require "user.colorschemes.catppuccin"
+require "user.colorschemes.everforest"
 
 -- TODO: figure this out in this setup. Not sure if it's needed though.
 -- Get the right colors when running Vim inside tmux: see `:h xterm-true-color`
@@ -12,8 +16,10 @@ if exists('+termguicolors')
 
 vim.cmd [[
 try
-  " colorscheme OceanicNext
-  colorscheme onedark
+  colorscheme everforest 
+  " colorscheme catppuccin
+  " colorscheme onedark
+  " colorscheme zenburn
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
