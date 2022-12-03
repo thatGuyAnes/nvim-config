@@ -65,7 +65,7 @@ nvim_tree.setup {
     ignore = false,
   },
   view                               = {
-    width = 25,
+    width = 30,
     --[[ height = 30, ]]
     side = 'left',
     preserve_window_proportions = false,
@@ -112,7 +112,7 @@ nvim_tree.setup {
   },
   renderer                           = {
     indent_markers = {
-      enable = false,
+      enable = true,
     },
     icons = {
       glyphs = {

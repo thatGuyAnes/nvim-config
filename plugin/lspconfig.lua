@@ -110,10 +110,25 @@ nvim_lsp.tsserver.setup {
 nvim_lsp.solargraph.setup {
   cmd = { "solargraph", "stdio" },
   filetypes = { "ruby", "eruby" },
-  on_attach = on_attach,
+  -- on_attach = on_attach,
+
+
+
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
+
+  capabilities = capabilities,
   settings = {
     solargraph = {
-      diagnostic = true
+      autoformat = true,
+      completion = true,
+      diagnostic = true,
+      folding = true,
+      references = true,
+      rename = true,
+      symbols = true,
     }
   }
 }
