@@ -20,7 +20,7 @@ telescope.setup {
     },
     winblend = 0,
     border = {},
-    borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
+    borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
     color_devicons = true,
     mappings = {
       i = {

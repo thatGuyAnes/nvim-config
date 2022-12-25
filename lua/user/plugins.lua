@@ -103,11 +103,14 @@ packer.startup(function(use)
   use "neanias/everforest-nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
   use { "phha/zenburn.nvim", }
+  use { "luisiacc/gruvbox-baby", branch = 'main' }
   -- Optional; default configuration will be used if setup isn't called.
   use 'shaunsingh/nord.nvim'
+  use "https://gitlab.com/__tpb/monokai-pro.nvim"
 
   use 'slim-template/vim-slim'
   use 'tpope/vim-rails'
+
 
 
 end)

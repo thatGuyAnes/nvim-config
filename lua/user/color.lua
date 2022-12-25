@@ -1,8 +1,10 @@
 -- require "user.colorschemes.zenburn"
--- require "user.colorschemes.neosolarized"
-require "user.colorschemes.one-dark"
+require "user.colorschemes.neosolarized"
+-- require "user.colorschemes.one-dark"
 -- require "user.colorschemes.catppuccin"
 -- require "user.colorschemes.everforest"
+-- require "user.colorschemes.gruvbox"
+-- require "user.colorschemes.monokai-pro"
 -- require "user.colorschemes.nord"
 
 -- TODO: figure this out in this setup. Not sure if it's needed though.
@@ -16,13 +18,14 @@ if exists('+termguicolors')
 
 vim.cmd [[
 try
-  "colorscheme everforest
-  "colorscheme OceanicNext
+" colorscheme monokaipro
+  " colorscheme everforest
+  " colorscheme OceanicNext
   "colorscheme catppuccin
-  colorscheme onedark
+  " colorscheme onedark
   "colorscheme zenburn
-  "colorscheme neosolarized
-  "colorscheme nord
+  colorscheme neosolarized
+  " colorscheme nord
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
