@@ -2,7 +2,7 @@
 -- spectrum, and classic
 -- default: --default--
 
-vim.g.monokaipro_filter = "default"
+vim.g.monokaipro_filter = "machine"
 -- vim.g.monokaipro_filter = "spectrum"
 -- vim.g.monokaipro_filter = "machine"
 -- vim.g.monokaipro_filter = "ristretto"

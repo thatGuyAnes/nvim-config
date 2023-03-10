@@ -1,10 +1,10 @@
 -- require "user.colorschemes.zenburn"
-require "user.colorschemes.neosolarized"
--- require "user.colorschemes.one-dark"
+-- require "user.colorschemes.neosolarized"
+require "user.colorschemes.one-dark"
 -- require "user.colorschemes.catppuccin"
 -- require "user.colorschemes.everforest"
 -- require "user.colorschemes.gruvbox"
--- require "user.colorschemes.monokai-pro"
+-- require "user.colorschemes.monokaipro"
 -- require "user.colorschemes.nord"
 
 -- TODO: figure this out in this setup. Not sure if it's needed though.
@@ -16,15 +16,19 @@ if exists('+termguicolors')
   endif
 ]]
 
+
 vim.cmd [[
 try
-" colorscheme monokaipro
-  " colorscheme everforest
+ " colorscheme gruvbox-baby
+ " colorscheme monokaipro
+
+  let g:everforest_background = 'hard'
+   colorscheme everforest
   " colorscheme OceanicNext
   "colorscheme catppuccin
-  " colorscheme onedark
+  "colorscheme onedark
   "colorscheme zenburn
-  colorscheme neosolarized
+ " colorscheme neosolarized
   " colorscheme nord
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
@@ -36,16 +40,13 @@ endtry
 vim.cmd [[
 " hi Normal       guibg=none
 " hi EndOfBuffer guibg=NONE ctermbg=NONE
+  hi Cursor guifg=#5eacd3  guibg=black
+  hi iCursor guifg=#5eacd3 guibg=steelblue
 " hi CursorLineNr guifg=#5eacd3   ctermfg=none
 " hi CursorLineNr guibg=NONE   ctermfg=none
-" hi CursorLine   guibg=#011F26      ctermbg=none
+"  hi CursorLine   guibg=#011F26      ctermbg=none
 " hi LineNr guibg=NONE
-" hi SignColumn guibg=NONE
-" hi clear LineNr
-" hi clear SignColumn
-
-" hi Normal guibg=NONE ctermbg=NONE
-" hi LineNr guibg=NONE ctermbg=NONE
-" hi SignColumn guibg=NONE ctermbg=NONE
-" hi EndOfBuffer guibg=NONE ctermbg=NONE
+ " hi SignColumn guibg=NONE
+  hi clear LineNr
+  hi clear SignColumn
 ]]

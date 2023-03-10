@@ -1,16 +1,16 @@
 USER = vim.fn.expand('$USER')
 
-local sumneko_root_path = ""
-local sumneko_binary = ""
+-- local sumneko_root_path = ""
+-- local sumneko_binary = ""
 
 if vim.fn.has("mac") == 1 then
-  sumneko_root_path = "/Users/" .. USER .. "/tools/lua-language-server"
-  sumneko_binary = "/Users/" .. USER .. "/tools/lua-language-server/bin/macOS/lua-language-server"
+  -- sumneko_root_path = "/Users/" .. USER .. "/tools/lua-language-server"
+  -- sumneko_binary = "/Users/" .. USER .. "/tools/lua-language-server/bin/macOS/lua-language-server"
 elseif vim.fn.has("unix") == 1 then
-  sumneko_root_path = "/home/" .. USER .. "/tools/lua-language-server"
-  sumneko_binary = "/home/" .. USER .. "/tools/lua-language-server/bin/lua-language-server"
+  -- sumneko_root_path = "/home/" .. USER .. "/tools/lua-language-server"
+  -- sumneko_binary = "/home/" .. USER .. "/tools/lua-language-server/bin/lua-language-server"
 else
-  print("Unsupported system for sumneko")
+  -- print("Unsupported system for sumneko")
 end
 
 local status, nvim_lsp = pcall(require, "lspconfig")
@@ -103,14 +103,14 @@ nvim_lsp.flow.setup {
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript" },
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
 
 nvim_lsp.solargraph.setup {
   -- cmd = { "solargraph", "stdio" },
-  filetypes = { "ruby", "arb"},
+  filetypes = { "ruby", "arb", "erb"},
   flags = {
     debounce_text_change = 150
   },
@@ -141,28 +141,28 @@ nvim_lsp.sourcekit.setup {
   capabilities = capabilities,
 }
 
-nvim_lsp.sumneko_lua.setup {
-  cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
-  capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-    enable_format_on_save(client, bufnr)
-  end,
-  settings = {
-    Lua = {
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { 'vim' },
-      },
-
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false
-      },
-    },
-  },
-}
+-- nvim_lsp.sumneko_lua.setup {
+--   cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
+--   capabilities = capabilities,
+--   on_attach = function(client, bufnr)
+--     on_attach(client, bufnr)
+--     enable_format_on_save(client, bufnr)
+--   end,
+--   settings = {
+--     Lua = {
+--       diagnostics = {
+--         -- Get the language server to recognize the `vim` global
+--         globals = { 'vim' },
+--       },
+--
+--       workspace = {
+--         -- Make the server aware of Neovim runtime files
+--         library = vim.api.nvim_get_runtime_file("", true),
+--         checkThirdParty = false
+--       },
+--     },
+--   },
+-- }
 
 -- nvim_lsp.tailwindcss.setup {
 --   on_attach = on_attach,

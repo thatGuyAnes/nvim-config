@@ -3,7 +3,7 @@ if (not status) then return end
 
 neosolarized.setup({
   comment_italics = false,
-  background_set = false,
+  background_set = true,
 })
 
 local cb = require('colorbuddy.init')
@@ -33,7 +33,7 @@ Group.new("DiagnosticUnderlineInfo", colors.none, colors.none, styles.undercurl,
 Group.new("DiagnosticUnderlineHint", colors.none, colors.none, styles.undercurl, cHint)
 
 -- Color.new('white', '#fdf6e3')
-Color.new('white', '#B4CBCE')
-Group.new('Normal', colors.white, bg_color, styles.NONE)
+-- Color.new('white', '#B4CBCE')
+-- Group.new('Normal', colors.white, bg_color, styles.NONE)
 -- Color.new('comment', '#76622E')
 -- Group.new('Comment', colors.comment, bg_color, styles.NONE)

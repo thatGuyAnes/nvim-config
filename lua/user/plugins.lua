@@ -28,7 +28,7 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
-  use "lukas-reineke/indent-blankline.nvim" -- Indent
+  -- use "lukas-reineke/indent-blankline.nvim" -- Indent
 
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
@@ -41,7 +41,19 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use "jose-elias-alvarez/nvim-lsp-ts-utils"
 
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  -- use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use({
+      "glepnir/lspsaga.nvim",
+      branch = "main",
+      config = function()
+          require("lspsaga").setup({})
+      end,
+      requires = {
+          {"nvim-tree/nvim-web-devicons"},
+          --Please make sure you install markdown and markdown_inline parser
+          {"nvim-treesitter/nvim-treesitter"}
+      }
+  })
   use 'L3MON4D3/LuaSnip'
 
   -- Treesitter
@@ -90,17 +102,22 @@ packer.startup(function(use)
     }
   }
 
+  --ruby
+  use 'vim-ruby/vim-ruby'
+  use 'tpope/vim-rails'
+  use 'jlcrochet/vim-ruby'
+
   -- COLORSCHEMES
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
-  use "https://gitlab.com/__tpb/monokai-pro.nvim"
   use 'romgrk/doom-one.vim'
   use 'marko-cerovac/material.nvim'
   use 'mhartington/oceanic-next'
+  -- use "neanias/everforest-nvim"
+  use "sainnhe/everforest"
   use 'navarasu/onedark.nvim'
-  use "neanias/everforest-nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
   use { "phha/zenburn.nvim", }
   use { "luisiacc/gruvbox-baby", branch = 'main' }
@@ -109,7 +126,6 @@ packer.startup(function(use)
   use "https://gitlab.com/__tpb/monokai-pro.nvim"
 
   use 'slim-template/vim-slim'
-  use 'tpope/vim-rails'
 
 
 

@@ -3,9 +3,10 @@
 
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"
+
 -- vim.opt.indent_blankline_char = "┊"
-vim.cmd [[highlight IndentBlanklineChar guifg=#2E3436 gui=nocombine]]
-vim.opt.list = true
+-- vim.cmd [[highlight IndentBlanklineChar guifg=#2E3436 gui=nocombine]]
+-- vim.opt.list = true
 
 
 -- g:indentLine_char_list = ['|', '¦', '┆', '┊']

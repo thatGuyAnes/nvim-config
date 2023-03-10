@@ -4,7 +4,7 @@ if (not status) then return end
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = 'solarized_dark',
+    theme = 'auto',
     -- theme = 'auto',
     --section_separators = { left = '', right = '' },
     component_separators = { left = '', right = '' },
@@ -40,7 +40,7 @@ lualine.setup {
     lualine_b = {
       {
         'branch',
-        color = { fg = '#C4A000' }
+        -- color = { fg = '#C4A000' }
       }
     },
     lualine_c = {
