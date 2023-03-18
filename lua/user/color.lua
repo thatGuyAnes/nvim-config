@@ -7,6 +7,7 @@ require "user.colorschemes.one-dark"
 -- require "user.colorschemes.monokaipro"
 -- require "user.colorschemes.nord"
 
+require('colorbuddy').colorscheme('cobalt2')
 -- TODO: figure this out in this setup. Not sure if it's needed though.
 -- Get the right colors when running Vim inside tmux: see `:h xterm-true-color`
 vim.cmd [[
@@ -22,8 +23,8 @@ try
  " colorscheme gruvbox-baby
  " colorscheme monokaipro
 
-  let g:everforest_background = 'hard'
-   colorscheme everforest
+  "let g:everforest_background = 'hard'
+   "colorscheme everforest
   " colorscheme OceanicNext
   "colorscheme catppuccin
   "colorscheme onedark

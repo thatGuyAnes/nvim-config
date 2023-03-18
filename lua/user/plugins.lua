@@ -124,6 +124,7 @@ packer.startup(function(use)
   -- Optional; default configuration will be used if setup isn't called.
   use 'shaunsingh/nord.nvim'
   use "https://gitlab.com/__tpb/monokai-pro.nvim"
+  use { 'lalitmee/cobalt2.nvim', requires = 'tjdevries/colorbuddy.nvim' }
 
   use 'slim-template/vim-slim'
 
