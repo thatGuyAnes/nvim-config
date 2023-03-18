@@ -4,8 +4,9 @@ require "user.colorschemes.one-dark"
 -- require "user.colorschemes.catppuccin"
 -- require "user.colorschemes.everforest"
 -- require "user.colorschemes.gruvbox"
--- require "user.colorschemes.monokaipro"
+require "user.colorschemes.monokaipro"
 -- require "user.colorschemes.nord"
+require "user.colorschemes.lighthaus"
 
 require('colorbuddy').colorscheme('cobalt2')
 -- TODO: figure this out in this setup. Not sure if it's needed though.
@@ -20,11 +21,21 @@ if exists('+termguicolors')
 
 vim.cmd [[
 try
+<<<<<<< HEAD
  " colorscheme gruvbox-baby
  " colorscheme monokaipro
 
   "let g:everforest_background = 'hard'
    "colorscheme everforest
+=======
+  let g:everforest_background = 'hard'
+ " colorscheme gruvbox-baby
+ colorscheme monokaipro
+
+   "colorscheme everforest
+   " colorscheme lighthaus
+    " colorscheme darcula-solid
+>>>>>>> f46f76e (packer sync)
   " colorscheme OceanicNext
   "colorscheme catppuccin
   "colorscheme onedark

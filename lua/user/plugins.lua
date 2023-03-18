@@ -103,9 +103,10 @@ packer.startup(function(use)
   }
 
   --ruby
-  use 'vim-ruby/vim-ruby'
+  -- use 'vim-ruby/vim-ruby'
   use 'tpope/vim-rails'
   use 'jlcrochet/vim-ruby'
+  use 'RRethy/nvim-treesitter-endwise'
 
   -- COLORSCHEMES
   use {
@@ -125,6 +126,8 @@ packer.startup(function(use)
   use 'shaunsingh/nord.nvim'
   use "https://gitlab.com/__tpb/monokai-pro.nvim"
   use { 'lalitmee/cobalt2.nvim', requires = 'tjdevries/colorbuddy.nvim' }
+  use 'mrjones2014/lighthaus.nvim'
+  use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
 
   use 'slim-template/vim-slim'
 
