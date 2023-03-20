@@ -101,7 +101,7 @@ _G.packer_plugins = {
   },
   ["cobalt2.nvim"] = {
     loaded = true,
-    path = "/home/anes/.local/share/nvim/site/pack/packer/start/cobalt2.nvim",
+    path = "/Users/anes/.local/share/nvim/site/pack/packer/start/cobalt2.nvim",
     url = "https://github.com/lalitmee/cobalt2.nvim"
   },
   ["colorbuddy.nvim"] = {
@@ -109,10 +109,10 @@ _G.packer_plugins = {
     path = "/Users/anes/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
-  ["darcula-solid.nvim"] = {
+  darcula = {
     loaded = true,
-    path = "/Users/anes/.local/share/nvim/site/pack/packer/start/darcula-solid.nvim",
-    url = "https://github.com/briones-gabriel/darcula-solid.nvim"
+    path = "/Users/anes/.local/share/nvim/site/pack/packer/start/darcula",
+    url = "https://github.com/doums/darcula"
   },
   ["doom-one.vim"] = {
     loaded = true,
@@ -159,11 +159,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/anes/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["lush.nvim"] = {
-    loaded = true,
-    path = "/Users/anes/.local/share/nvim/site/pack/packer/start/lush.nvim",
-    url = "https://github.com/rktjmp/lush.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = true,

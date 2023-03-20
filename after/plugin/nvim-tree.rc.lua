@@ -35,7 +35,7 @@ nvim_tree.setup {
   ignore_ft_on_setup                 = {},
   hijack_directories                 = {
     enable = true,
-    auto_open = true,
+    auto_open = false,
   },
   -- auto_close           = true,
   auto_reload_on_write               = true,

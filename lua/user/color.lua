@@ -8,7 +8,7 @@ require "user.colorschemes.monokaipro"
 -- require "user.colorschemes.nord"
 require "user.colorschemes.lighthaus"
 
-require('colorbuddy').colorscheme('cobalt2')
+-- require('colorbuddy').colorscheme('cobalt2')
 -- TODO: figure this out in this setup. Not sure if it's needed though.
 -- Get the right colors when running Vim inside tmux: see `:h xterm-true-color`
 vim.cmd [[
@@ -21,21 +21,18 @@ if exists('+termguicolors')
 
 vim.cmd [[
 try
-<<<<<<< HEAD
+colorscheme darcula
  " colorscheme gruvbox-baby
  " colorscheme monokaipro
-
   "let g:everforest_background = 'hard'
    "colorscheme everforest
-=======
-  let g:everforest_background = 'hard'
+  "let g:everforest_background = 'hard'
  " colorscheme gruvbox-baby
- colorscheme monokaipro
+ "colorscheme monokaipro
 
    "colorscheme everforest
    " colorscheme lighthaus
     " colorscheme darcula-solid
->>>>>>> f46f76e (packer sync)
   " colorscheme OceanicNext
   "colorscheme catppuccin
   "colorscheme onedark
@@ -58,7 +55,7 @@ vim.cmd [[
 " hi CursorLineNr guibg=NONE   ctermfg=none
 "  hi CursorLine   guibg=#011F26      ctermbg=none
 " hi LineNr guibg=NONE
- " hi SignColumn guibg=NONE
-  hi clear LineNr
-  hi clear SignColumn
+" hi SignColumn guibg=NONE
+  "hi clear LineNr
+  " hi clear SignColumn
 ]]

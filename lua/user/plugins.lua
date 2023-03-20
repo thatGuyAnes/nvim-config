@@ -127,7 +127,8 @@ packer.startup(function(use)
   use "https://gitlab.com/__tpb/monokai-pro.nvim"
   use { 'lalitmee/cobalt2.nvim', requires = 'tjdevries/colorbuddy.nvim' }
   use 'mrjones2014/lighthaus.nvim'
-  use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
+  -- use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
+  use 'doums/darcula'
 
   use 'slim-template/vim-slim'
 
