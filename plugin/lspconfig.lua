@@ -1,16 +1,16 @@
 USER = vim.fn.expand('$USER')
 
--- local sumneko_root_path = ""
--- local sumneko_binary = ""
+local sumneko_root_path = ""
+local sumneko_binary = ""
 
 if vim.fn.has("mac") == 1 then
-  -- sumneko_root_path = "/Users/" .. USER .. "/tools/lua-language-server"
-  -- sumneko_binary = "/Users/" .. USER .. "/tools/lua-language-server/bin/macOS/lua-language-server"
+  sumneko_root_path = "/Users/" .. USER .. "/tools/lua-language-server"
+  sumneko_binary = "/Users/" .. USER .. "/tools/lua-language-server/bin/macOS/lua-language-server"
 elseif vim.fn.has("unix") == 1 then
-  -- sumneko_root_path = "/home/" .. USER .. "/tools/lua-language-server"
-  -- sumneko_binary = "/home/" .. USER .. "/tools/lua-language-server/bin/lua-language-server"
+  sumneko_root_path = "/home/" .. USER .. "/tools/lua-language-server"
+  sumneko_binary = "/home/" .. USER .. "/tools/lua-language-server/bin/lua-language-server"
 else
-  -- print("Unsupported system for sumneko")
+  print("Unsupported system for sumneko")
 end
 
 local status, nvim_lsp = pcall(require, "lspconfig")
@@ -110,7 +110,7 @@ nvim_lsp.tsserver.setup {
 
 nvim_lsp.solargraph.setup {
   -- cmd = { "solargraph", "stdio" },
-  filetypes = { "ruby", "arb", "erb"},
+  filetypes = { "ruby", "arb", "erb" },
   flags = {
     debounce_text_change = 150
   },

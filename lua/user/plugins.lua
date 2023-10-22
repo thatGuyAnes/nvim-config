@@ -108,7 +108,23 @@ packer.startup(function(use)
   use 'jlcrochet/vim-ruby'
   use 'RRethy/nvim-treesitter-endwise'
 
+  -- WHICH KEY
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
   -- COLORSCHEMES
+  use {
+    'folke/tokyonight.nvim',
+  }
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
@@ -129,6 +145,7 @@ packer.startup(function(use)
   use 'mrjones2014/lighthaus.nvim'
   -- use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
   use 'doums/darcula'
+  use "rebelot/kanagawa.nvim"
 
   use 'slim-template/vim-slim'
 
