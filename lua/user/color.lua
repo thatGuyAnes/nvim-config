@@ -3,7 +3,7 @@
 -- require "user.colorschemes.one-dark"
 -- require "user.colorschemes.one-dark"
 -- require "user.colorschemes.catppuccin"
-require "user.colorschemes.everforest"
+-- require "user.colorschemes.everforest"
 
 -- TODO: figure this out in this setup. Not sure if it's needed though.
 -- Get the right colors when running Vim inside tmux: see `:h xterm-true-color`
@@ -16,7 +16,7 @@ if exists('+termguicolors')
 
 vim.cmd [[
 try
-  colorscheme everforest 
+  colorscheme doom-one 
   " colorscheme catppuccin
   " colorscheme onedark
   " colorscheme zenburn
