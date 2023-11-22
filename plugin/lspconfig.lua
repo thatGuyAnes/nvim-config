@@ -19,6 +19,7 @@ if (not status) then return end
 local protocol = require('vim.lsp.protocol')
 
 local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
+
 local enable_format_on_save = function(_, bufnr)
   vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
   vim.api.nvim_create_autocmd("BufWritePre", {
@@ -93,7 +94,7 @@ protocol.CompletionItemKind = {
 }
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 nvim_lsp.flow.setup {
   on_attach = on_attach,
@@ -102,21 +103,23 @@ nvim_lsp.flow.setup {
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript" },
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
 
 nvim_lsp.solargraph.setup {
-  cmd = { "solargraph", "stdio" },
-  filetypes = { "ruby", "eruby" },
+  -- cmd = { "solargraph", "stdio" },
+  filetypes = { "ruby", "arb", "erb" },
+  flags = {
+    debounce_text_change = 150
+  },
+  root_dir = nvim_lsp.util.root_pattern("Gemfile", ".git", ","),
   -- on_attach = on_attach,
-
-
 
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
-    enable_format_on_save(client, bufnr)
+    -- enable_format_on_save(client, bufnr)
   end,
 
   capabilities = capabilities,
@@ -138,28 +141,28 @@ nvim_lsp.sourcekit.setup {
   capabilities = capabilities,
 }
 
-nvim_lsp.sumneko_lua.setup {
-  cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
-  capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    on_attach(client, bufnr)
-    enable_format_on_save(client, bufnr)
-  end,
-  settings = {
-    Lua = {
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { 'vim' },
-      },
-
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false
-      },
-    },
-  },
-}
+-- nvim_lsp.sumneko_lua.setup {
+--   cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
+--   capabilities = capabilities,
+--   on_attach = function(client, bufnr)
+--     on_attach(client, bufnr)
+--     enable_format_on_save(client, bufnr)
+--   end,
+--   settings = {
+--     Lua = {
+--       diagnostics = {
+--         -- Get the language server to recognize the `vim` global
+--         globals = { 'vim' },
+--       },
+--
+--       workspace = {
+--         -- Make the server aware of Neovim runtime files
+--         library = vim.api.nvim_get_runtime_file("", true),
+--         checkThirdParty = false
+--       },
+--     },
+--   },
+-- }
 
 -- nvim_lsp.tailwindcss.setup {
 --   on_attach = on_attach,
@@ -180,7 +183,8 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
   update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = '   ' },
+  virtual_text = false,
+  -- virtual_text = { spacing = 4, prefix = '   ' },
   severity_sort = true,
 }
 )

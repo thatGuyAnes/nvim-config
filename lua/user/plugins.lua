@@ -28,6 +28,7 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
+  -- use "lukas-reineke/indent-blankline.nvim" -- Indent
 
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
@@ -40,7 +41,19 @@ packer.startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
   use "jose-elias-alvarez/nvim-lsp-ts-utils"
 
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  -- use 'glepnir/lspsaga.nvim' -- LSP UIs
+  use({
+      "glepnir/lspsaga.nvim",
+      branch = "main",
+      config = function()
+          require("lspsaga").setup({})
+      end,
+      requires = {
+          {"nvim-tree/nvim-web-devicons"},
+          --Please make sure you install markdown and markdown_inline parser
+          {"nvim-treesitter/nvim-treesitter"}
+      }
+  })
   use 'L3MON4D3/LuaSnip'
 
   -- Treesitter
@@ -49,7 +62,7 @@ packer.startup(function(use)
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
 
-  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'nvim-tree/nvim-web-devicons' -- File icons
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
@@ -89,18 +102,53 @@ packer.startup(function(use)
     }
   }
 
+  --ruby
+  -- use 'vim-ruby/vim-ruby'
+  use 'tpope/vim-rails'
+  use 'jlcrochet/vim-ruby'
+  use 'RRethy/nvim-treesitter-endwise'
+
+  -- WHICH KEY
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
   -- COLORSCHEMES
+  use {
+    'folke/tokyonight.nvim',
+  }
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
-  use "https://gitlab.com/__tpb/monokai-pro.nvim"
   use 'romgrk/doom-one.vim'
   use 'marko-cerovac/material.nvim'
   use 'mhartington/oceanic-next'
+  -- use "neanias/everforest-nvim"
+  use "sainnhe/everforest"
   use 'navarasu/onedark.nvim'
-  use "neanias/everforest-nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
   use { "phha/zenburn.nvim", }
+  use { "luisiacc/gruvbox-baby", branch = 'main' }
   -- Optional; default configuration will be used if setup isn't called.
+  use 'shaunsingh/nord.nvim'
+  use "https://gitlab.com/__tpb/monokai-pro.nvim"
+  use { 'lalitmee/cobalt2.nvim', requires = 'tjdevries/colorbuddy.nvim' }
+  use 'mrjones2014/lighthaus.nvim'
+  -- use { "briones-gabriel/darcula-solid.nvim", requires = "rktjmp/lush.nvim" }
+  use 'doums/darcula'
+  use "rebelot/kanagawa.nvim"
+
+  use 'slim-template/vim-slim'
+
+
+
 end)
