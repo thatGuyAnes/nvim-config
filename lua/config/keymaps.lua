@@ -40,3 +40,6 @@ map("n", "vv", "V", { noremap = true, silent = true })
 -- Forward delete in insert mode, alternative to 'ctrl-o + x' or pressing the
 -- del key. There is also the 'shift-c' to delete to the end of line.
 map("i", "<C-d>", "<Del>")
+
+-- Hold on to the yanked text
+map("v", "p", '"_dP', { noremap = false, silent = true })

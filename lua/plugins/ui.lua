@@ -1,13 +1,13 @@
 local Util = require("lazyvim.util")
 return {
   -- ANIMATION
-  {
-    "echasnovski/mini.animate",
-    event = "VeryLazy",
-    opts = function(_, opts)
-      opts.scroll = {}
-    end,
-  },
+  -- {
+  --   "echasnovski/mini.animate",
+  --   event = "VeryLazy",
+  --   opts = function(_, opts)
+  --     opts.scroll = {}
+  --   end,
+  -- },
   -- NOICE
   {
     "folke/noice.nvim",
@@ -27,8 +27,9 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 8000,
-      background_colour = "#000000",
+      timeout = 5000,
+      background_colour = "NotifyBackground",
+      stages = "slide",
     },
   },
 
@@ -57,7 +58,7 @@ return {
 
       return {
         options = {
-          theme = "auto",
+          theme = "solarized_dark",
           globalstatus = true,
           disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
         },
